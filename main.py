@@ -1,9 +1,8 @@
-from environment import Enviroment
+from environment import Environment
 from agent import Agent
 
 # Initialize game environment and agents
-env = Enviroment()
-
+env = Environment()
 agent_a = Agent(
     team="A",
     persona="an intelligent and strategic player",
@@ -18,7 +17,7 @@ agent_b = Agent(
 
 round_idx = 0
 
-while True:
+for _ in range(10):
     round_idx += 1
     print(f"\n--- Start of Round {round_idx} ---\n")
 

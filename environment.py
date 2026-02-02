@@ -2,7 +2,7 @@ from typing import Dict, List, Any
 from utils import log_action_events
 
 
-class Enviroment:
+class Environment:
     """
     Game environment for the traditional Vietnamese board game Ô ăn quan.
 

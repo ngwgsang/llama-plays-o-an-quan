@@ -7,19 +7,12 @@ from dotenv import load_dotenv
 from os import getenv
 
 from langchain_openai import ChatOpenAI
-from langchain.tools import tool
-from langchain.messages import RemoveMessage
-from langgraph.graph.message import REMOVE_ALL_MESSAGES
-from langgraph.checkpoint.memory import InMemorySaver
 from langchain.agents import create_agent, AgentState
-from langchain.agents.middleware import before_model
-from langgraph.runtime import Runtime
-from langchain_core.runnables import RunnableConfig
+from langchain.tools import tool
+
 
 
 from utils import log_tool
-from environment import Enviroment
-
 
 load_dotenv()
 
@@ -51,8 +44,6 @@ class PlayerState(AgentState):
     player_team: str
     current_game_state: dict
     current_available_positions: list[str]
-
-enviroment = Enviroment()
 
 @tool
 @log_tool
