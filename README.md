@@ -1,8 +1,9 @@
 # Can LLMs Play Ô Ăn Quan? A Study of Multi-Step Planning and Decision Making
 
 [![arXiv](https://img.shields.io/badge/arXiv-2507.03711-b31b1b.svg)](https://arxiv.org/abs/2507.03711)
+[![IEEE Xplore](https://img.shields.io/badge/IEEE%20Xplore-11133971-00629B.svg)](https://ieeexplore.ieee.org/document/11133971/)
 
-📄 Paper: [https://arxiv.org/abs/2507.03711](https://arxiv.org/abs/2507.03711)
+📄 Paper: [IEEE Xplore](https://ieeexplore.ieee.org/document/11133971/) · [arXiv](https://arxiv.org/abs/2507.03711)
 
 This repository contains a reference implementation of the Ô Ăn Quan
 game environment and LLM-based agents used in our study.
