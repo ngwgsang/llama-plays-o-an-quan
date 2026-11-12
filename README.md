@@ -160,10 +160,6 @@ cd backend
 python -m unittest discover -s tests
 ```
 
-## Note
-
- ⚠️ This is a LangChain-based re-implementation. The persona prompts are not published in the paper, so the files in [prompts/personas/](backend/src/o_an_quan/prompts/personas/) are written to match each persona's name. To add a persona, drop a new `<Name>.md` file into that folder; it becomes available as `<Name>` in the experiments CLI.
-
 ## Citation
 
 If you use this code, please cite:
