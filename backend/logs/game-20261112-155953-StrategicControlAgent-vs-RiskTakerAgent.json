@@ -1,0 +1,2438 @@
+{
+  "schema": "o-an-quan/game-log@1",
+  "config": {
+    "max_rounds": 25,
+    "seed": 1,
+    "agents": {
+      "A": {
+        "type": "llm",
+        "model": "google/gemma-4-31b-it",
+        "persona": "StrategicControlAgent"
+      },
+      "B": {
+        "type": "llm",
+        "model": "google/gemma-4-31b-it",
+        "persona": "RiskTakerAgent"
+      }
+    }
+  },
+  "agent_a": "StrategicControlAgent",
+  "agent_b": "RiskTakerAgent",
+  "model_a": "google/gemma-4-31b-it",
+  "model_b": "google/gemma-4-31b-it",
+  "rounds_played": 9,
+  "end_reason": "END_BY_NO_MANDARINS",
+  "final_score": {
+    "A": 55,
+    "B": 15
+  },
+  "winner": "A",
+  "round_scores": [
+    {
+      "A": 6,
+      "B": 0
+    },
+    {
+      "A": 12,
+      "B": 0
+    },
+    {
+      "A": 27,
+      "B": 5
+    },
+    {
+      "A": 27,
+      "B": 8
+    },
+    {
+      "A": 27,
+      "B": 8
+    },
+    {
+      "A": 32,
+      "B": 8
+    },
+    {
+      "A": 32,
+      "B": 8
+    },
+    {
+      "A": 32,
+      "B": 10
+    },
+    {
+      "A": 52,
+      "B": 10
+    }
+  ],
+  "initial_board": {
+    "QA": {
+      "peasants": 0,
+      "mandarin": true
+    },
+    "A1": {
+      "peasants": 5,
+      "mandarin": false
+    },
+    "A2": {
+      "peasants": 5,
+      "mandarin": false
+    },
+    "A3": {
+      "peasants": 5,
+      "mandarin": false
+    },
+    "A4": {
+      "peasants": 5,
+      "mandarin": false
+    },
+    "A5": {
+      "peasants": 5,
+      "mandarin": false
+    },
+    "QB": {
+      "peasants": 0,
+      "mandarin": true
+    },
+    "B1": {
+      "peasants": 5,
+      "mandarin": false
+    },
+    "B2": {
+      "peasants": 5,
+      "mandarin": false
+    },
+    "B3": {
+      "peasants": 5,
+      "mandarin": false
+    },
+    "B4": {
+      "peasants": 5,
+      "mandarin": false
+    },
+    "B5": {
+      "peasants": 5,
+      "mandarin": false
+    }
+  },
+  "final_board": {
+    "QA": {
+      "peasants": 0,
+      "mandarin": false
+    },
+    "A1": {
+      "peasants": 0,
+      "mandarin": false
+    },
+    "A2": {
+      "peasants": 0,
+      "mandarin": false
+    },
+    "A3": {
+      "peasants": 0,
+      "mandarin": false
+    },
+    "A4": {
+      "peasants": 0,
+      "mandarin": false
+    },
+    "A5": {
+      "peasants": 0,
+      "mandarin": false
+    },
+    "QB": {
+      "peasants": 0,
+      "mandarin": false
+    },
+    "B1": {
+      "peasants": 0,
+      "mandarin": false
+    },
+    "B2": {
+      "peasants": 0,
+      "mandarin": false
+    },
+    "B3": {
+      "peasants": 0,
+      "mandarin": false
+    },
+    "B4": {
+      "peasants": 0,
+      "mandarin": false
+    },
+    "B5": {
+      "peasants": 0,
+      "mandarin": false
+    }
+  },
+  "turns": [
+    {
+      "round": 1,
+      "team": "A",
+      "agent": "StrategicControlAgent",
+      "model": "google/gemma-4-31b-it",
+      "pos": "A3",
+      "way": "counter_clockwise",
+      "reason": "Following the StrategicControlAgent persona, I want to build up my positions and avoid premature greedy captures (especially since Mandarin captures are forbidden in the first two rounds). Starting from A3 and moving counter-clockwise helps distribute peasants across my own cells and towards the opponent's side, creating potential for future capture chains and controlling the board's flow.",
+      "observation": "Current board state: QA(1M), A1-A5(5P each), QB(1M), B1-B5(5P each). It is Round 1, and I am Player A.",
+      "invalid_attempts": 0,
+      "fallback": false,
+      "output_tokens": 443,
+      "error": "",
+      "steps": [
+        "[scatter] A3 - counter clockwise",
+        "[scatter] B3 - continue",
+        "[capture] A2 (6 pieces)"
+      ],
+      "captured": 6,
+      "score": {
+        "A": 6,
+        "B": 0
+      },
+      "board": {
+        "QA": {
+          "peasants": 1,
+          "mandarin": true
+        },
+        "A1": {
+          "peasants": 6,
+          "mandarin": false
+        },
+        "A2": {
+          "peasants": 0,
+          "mandarin": false
+        },
+        "A3": {
+          "peasants": 0,
+          "mandarin": false
+        },
+        "A4": {
+          "peasants": 6,
+          "mandarin": false
+        },
+        "A5": {
+          "peasants": 6,
+          "mandarin": false
+        },
+        "QB": {
+          "peasants": 1,
+          "mandarin": true
+        },
+        "B1": {
+          "peasants": 6,
+          "mandarin": false
+        },
+        "B2": {
+          "peasants": 6,
+          "mandarin": false
+        },
+        "B3": {
+          "peasants": 0,
+          "mandarin": false
+        },
+        "B4": {
+          "peasants": 6,
+          "mandarin": false
+        },
+        "B5": {
+          "peasants": 6,
+          "mandarin": false
+        }
+      },
+      "restored": false,
+      "events": [
+        {
+          "type": "pickup",
+          "pos": "A3",
+          "peasants": 5
+        },
+        {
+          "type": "drop",
+          "from": "A3",
+          "to": "A2"
+        },
+        {
+          "type": "drop",
+          "from": "A2",
+          "to": "A1"
+        },
+        {
+          "type": "drop",
+          "from": "A1",
+          "to": "QA"
+        },
+        {
+          "type": "drop",
+          "from": "QA",
+          "to": "B1"
+        },
+        {
+          "type": "drop",
+          "from": "B1",
+          "to": "B2"
+        },
+        {
+          "type": "pickup",
+          "pos": "B3",
+          "peasants": 5
+        },
+        {
+          "type": "drop",
+          "from": "B3",
+          "to": "B4"
+        },
+        {
+          "type": "drop",
+          "from": "B4",
+          "to": "B5"
+        },
+        {
+          "type": "drop",
+          "from": "B5",
+          "to": "QB"
+        },
+        {
+          "type": "drop",
+          "from": "QB",
+          "to": "A5"
+        },
+        {
+          "type": "drop",
+          "from": "A5",
+          "to": "A4"
+        },
+        {
+          "type": "capture",
+          "pos": "A2",
+          "peasants": 6,
+          "mandarin": false
+        },
+        {
+          "type": "score_update",
+          "score": {
+            "A": 6,
+            "B": 0
+          }
+        },
+        {
+          "type": "end_turn",
+          "reason": "CHAIN_BROKEN"
+        }
+      ]
+    },
+    {
+      "round": 1,
+      "team": "B",
+      "agent": "RiskTakerAgent",
+      "model": "google/gemma-4-31b-it",
+      "pos": "B1",
+      "way": "clockwise",
+      "reason": "I am playing as the RiskTakerAgent. I want to maximize my points quickly. Looking at the board, B1 is a strong starting point. If I scatter clockwise from B1, the pieces will go: QA (1), A1 (1), A2 (1), A3 (1), A4 (1), A5 (1). The last piece lands in A5. The next cell is QB, which is a Mandarin cell, ending the turn. However, if I scatter counter-clockwise from B1, the pieces go: B2 (1), B3 (1), B4 (1), B5 (1), QB (1), B5 (1). This is not very aggressive. Let's evaluate B2 counter-clockwise: B3 (1), B4 (1), B5 (1), QB (1), B5 (1), B4 (1). Still not great. Let's try B5 clockwise: QB (1), B5 (1), B4 (1), B3 (1), B2 (1), B1 (1). The last piece lands in B1. The next cell is QA. That's a Mandarin cell, ending the turn. Since the Early Game Restriction (E3) prevents Mandarin captures, I'll look for the most aggressive peasant capture. Moving clockwise from B1 lands the last piece in A5; moving counter-clockwise from B1 lands the last piece in B5 (after QB). Let's look at B2 clockwise: B3 (1), B4 (1), B5 (1), QB (1), B5 (1), B4 (1), B3 (1). The last piece is in B3. The next cell is B2, which has 5 pieces. I can pick them up and continue. This is a long chain. Let's calculate B2 clockwise: 6 pieces -> B3, B4, B5, QB, B5, B4. Last piece at B4. B3 is next and has 0. Then B2 has 5. I pick up B2's 5 and go: B3, B4, B5, QB, B5, B4. Last piece at B4. Next cell is B3 (empty), next is B2 (empty). Turn ends. Let's try B5 counter-clockwise: B4, B3, B2, B1, QA, A1. Last piece A1. Next cell A2 (empty), next cell A3 (empty). Turn ends (E4). Let's try B1 clockwise: QA, A1, A2, A3, A4, A5. Last piece A5. Next is QB (Mandarin), turn ends. Let's try B4 clockwise: B5, QB, B5, B4, B3, B2. Last piece B2. Next is B1 (6p). Pick up B1: B2, B3, B4, B5, QB, B5. Last piece B5. Next is B4 (empty), next is B3 (empty). Turn ends. To be aggressive, I will start at B1 and go clockwise to distribute pieces into the opponent's empty cells (A2, A3) to set up a future capture chain, while maintaining my side's strength.",
+      "observation": "The current board state is QA: 1m+1p, A1: 6p, A2: 0p, A3: 0p, A4: 6p, A5: 6p, QB: 1m+1p, B5: 6p, B4: 6p, B3: 0p, B2: 6p, B1: 6p. Available positions for Team B are B1, B2, B4, B5.",
+      "invalid_attempts": 0,
+      "fallback": false,
+      "output_tokens": 1124,
+      "error": "",
+      "steps": [
+        "[scatter] B1 - clockwise"
+      ],
+      "captured": 0,
+      "score": {
+        "A": 6,
+        "B": 0
+      },
+      "board": {
+        "QA": {
+          "peasants": 2,
+          "mandarin": true
+        },
+        "A1": {
+          "peasants": 7,
+          "mandarin": false
+        },
+        "A2": {
+          "peasants": 1,
+          "mandarin": false
+        },
+        "A3": {
+          "peasants": 1,
+          "mandarin": false
+        },
+        "A4": {
+          "peasants": 7,
+          "mandarin": false
+        },
+        "A5": {
+          "peasants": 7,
+          "mandarin": false
+        },
+        "QB": {
+          "peasants": 1,
+          "mandarin": true
+        },
+        "B1": {
+          "peasants": 0,
+          "mandarin": false
+        },
+        "B2": {
+          "peasants": 6,
+          "mandarin": false
+        },
+        "B3": {
+          "peasants": 0,
+          "mandarin": false
+        },
+        "B4": {
+          "peasants": 6,
+          "mandarin": false
+        },
+        "B5": {
+          "peasants": 6,
+          "mandarin": false
+        }
+      },
+      "restored": false,
+      "events": [
+        {
+          "type": "pickup",
+          "pos": "B1",
+          "peasants": 6
+        },
+        {
+          "type": "drop",
+          "from": "B1",
+          "to": "QA"
+        },
+        {
+          "type": "drop",
+          "from": "QA",
+          "to": "A1"
+        },
+        {
+          "type": "drop",
+          "from": "A1",
+          "to": "A2"
+        },
+        {
+          "type": "drop",
+          "from": "A2",
+          "to": "A3"
+        },
+        {
+          "type": "drop",
+          "from": "A3",
+          "to": "A4"
+        },
+        {
+          "type": "drop",
+          "from": "A4",
+          "to": "A5"
+        },
+        {
+          "type": "end_turn",
+          "reason": "HIT_MANDARIN_CELL"
+        }
+      ]
+    },
+    {
+      "round": 2,
+      "team": "A",
+      "agent": "StrategicControlAgent",
+      "model": "google/gemma-4-31b-it",
+      "pos": "A1",
+      "way": "clockwise",
+      "reason": "I am playing as StrategicControlAgent. My goal is board control and setting up future capture chains. A1 has 7 peasants. Sowing clockwise from A1 will distribute pieces through A2, A3, A4, A5, QB, B5, B4. The last piece lands in B4. The next cell is B3, which is empty, and the one after is B2, which contains 6 peasants. This creates a capture opportunity (B3 empty -> B2 has pieces). By capturing B2, I not only gain points but disrupt the opponent's concentration of pieces on their side, fitting my strategy of controlling the board and preventing the opponent from consolidating.",
+      "observation": "Board state: QA(2), A1(7), A2(1), A3(1), A4(7), A5(7), QB(1), B5(6), B4(6), B3(0), B2(6), B1(0). Available: A1, A2, A3, A4, A5.",
+      "invalid_attempts": 0,
+      "fallback": false,
+      "output_tokens": 612,
+      "error": "",
+      "steps": [
+        "[scatter] A1 - clockwise",
+        "[capture] B2 (6 pieces)"
+      ],
+      "captured": 6,
+      "score": {
+        "A": 12,
+        "B": 0
+      },
+      "board": {
+        "QA": {
+          "peasants": 2,
+          "mandarin": true
+        },
+        "A1": {
+          "peasants": 0,
+          "mandarin": false
+        },
+        "A2": {
+          "peasants": 2,
+          "mandarin": false
+        },
+        "A3": {
+          "peasants": 2,
+          "mandarin": false
+        },
+        "A4": {
+          "peasants": 8,
+          "mandarin": false
+        },
+        "A5": {
+          "peasants": 8,
+          "mandarin": false
+        },
+        "QB": {
+          "peasants": 2,
+          "mandarin": true
+        },
+        "B1": {
+          "peasants": 0,
+          "mandarin": false
+        },
+        "B2": {
+          "peasants": 0,
+          "mandarin": false
+        },
+        "B3": {
+          "peasants": 0,
+          "mandarin": false
+        },
+        "B4": {
+          "peasants": 7,
+          "mandarin": false
+        },
+        "B5": {
+          "peasants": 7,
+          "mandarin": false
+        }
+      },
+      "restored": false,
+      "events": [
+        {
+          "type": "pickup",
+          "pos": "A1",
+          "peasants": 7
+        },
+        {
+          "type": "drop",
+          "from": "A1",
+          "to": "A2"
+        },
+        {
+          "type": "drop",
+          "from": "A2",
+          "to": "A3"
+        },
+        {
+          "type": "drop",
+          "from": "A3",
+          "to": "A4"
+        },
+        {
+          "type": "drop",
+          "from": "A4",
+          "to": "A5"
+        },
+        {
+          "type": "drop",
+          "from": "A5",
+          "to": "QB"
+        },
+        {
+          "type": "drop",
+          "from": "QB",
+          "to": "B5"
+        },
+        {
+          "type": "drop",
+          "from": "B5",
+          "to": "B4"
+        },
+        {
+          "type": "capture",
+          "pos": "B2",
+          "peasants": 6,
+          "mandarin": false
+        },
+        {
+          "type": "score_update",
+          "score": {
+            "A": 12,
+            "B": 0
+          }
+        },
+        {
+          "type": "forbidden_capture",
+          "pos": "QA",
+          "reason": "EARLY_GAME_RESTRICTION"
+        }
+      ]
+    },
+    {
+      "round": 2,
+      "team": "B",
+      "agent": "RiskTakerAgent",
+      "model": "google/gemma-4-31b-it",
+      "pos": "B4",
+      "way": "clockwise",
+      "reason": "I am playing as the RiskTakerAgent. I need to make a high-impact move to catch up with the score. Starting from B4 and scattering clockwise: B5(1), QB(1), B5(1), B4(1), B3(1), B2(1), B1(1). The last piece lands in B1. The next cell is QA, which is a Mandarin cell, so the turn ends. However, if I go counter-clockwise from B4: B3(1), B2(1), B1(1), QA(1), A1(1), A2(1), A3(1). The last piece lands in A3. The next cell is A4, which has 8 peasants. This is a massive capture opportunity. By landing the last piece in A3, the next cell is A4, and if A3 was empty, I could capture. But A3 is where the last piece lands. Let's re-evaluate B5 counter-clockwise: B4(1), B3(1), B2(1), B1(1), QA(1), A1(1), A2(1). Last piece A2. Next is A3 (2p), then A4 (8p). Wait, if I scatter from B5 counter-clockwise, 7 pieces go: B4, B3, B2, B1, QA, A1, A2. Last piece is A2. The next cell is A3 (2p). Since A3 is not empty, I pick up those 2 and continue: A4, A5, QB, B5, B4, B3, B2. Last piece B2. Next cell B1 (empty), and the cell beyond is QA (Mandarin). This is complex. Let's stick to the aggressive intent of targeting the large stacks in A4 and A5. B4 clockwise is a solid move to redistribute and set up. Actually, looking at the B4 clockwise path: 7 pieces go to B5, QB, B5, B4, B3, B2, B1. Last piece B1. Next cell is QA (Mandarin). This ends the turn but prepares B1-B3 for future plays. Given the persona, I will take the risk to move pieces toward the opponent's side.",
+      "observation": "Board: QA(1m,2p), A1(0), A2(2), A3(2), A4(8), A5(8), QB(1m,2p), B5(7), B4(7), B3(0), B2(0), B1(0). Available: B4, B5.",
+      "invalid_attempts": 0,
+      "fallback": false,
+      "output_tokens": 1291,
+      "error": "",
+      "steps": [
+        "[scatter] B4 - clockwise",
+        "[scatter] A4 - continue",
+        "[scatter] A1 - continue",
+        "[scatter] A3 - continue",
+        "[scatter] B5 - continue",
+        "[scatter] A4 - continue"
+      ],
+      "captured": 0,
+      "score": {
+        "A": 12,
+        "B": 0
+      },
+      "board": {
+        "QA": {
+          "peasants": 5,
+          "mandarin": true
+        },
+        "A1": {
+          "peasants": 1,
+          "mandarin": false
+        },
+        "A2": {
+          "peasants": 5,
+          "mandarin": false
+        },
+        "A3": {
+          "peasants": 1,
+          "mandarin": false
+        },
+        "A4": {
+          "peasants": 0,
+          "mandarin": false
+        },
+        "A5": {
+          "peasants": 11,
+          "mandarin": false
+        },
+        "QB": {
+          "peasants": 4,
+          "mandarin": true
+        },
+        "B1": {
+          "peasants": 3,
+          "mandarin": false
+        },
+        "B2": {
+          "peasants": 3,
+          "mandarin": false
+        },
+        "B3": {
+          "peasants": 3,
+          "mandarin": false
+        },
+        "B4": {
+          "peasants": 2,
+          "mandarin": false
+        },
+        "B5": {
+          "peasants": 0,
+          "mandarin": false
+        }
+      },
+      "restored": false,
+      "events": [
+        {
+          "type": "pickup",
+          "pos": "B4",
+          "peasants": 7
+        },
+        {
+          "type": "drop",
+          "from": "B4",
+          "to": "B3"
+        },
+        {
+          "type": "drop",
+          "from": "B3",
+          "to": "B2"
+        },
+        {
+          "type": "drop",
+          "from": "B2",
+          "to": "B1"
+        },
+        {
+          "type": "drop",
+          "from": "B1",
+          "to": "QA"
+        },
+        {
+          "type": "drop",
+          "from": "QA",
+          "to": "A1"
+        },
+        {
+          "type": "drop",
+          "from": "A1",
+          "to": "A2"
+        },
+        {
+          "type": "drop",
+          "from": "A2",
+          "to": "A3"
+        },
+        {
+          "type": "pickup",
+          "pos": "A4",
+          "peasants": 8
+        },
+        {
+          "type": "drop",
+          "from": "A4",
+          "to": "A5"
+        },
+        {
+          "type": "drop",
+          "from": "A5",
+          "to": "QB"
+        },
+        {
+          "type": "drop",
+          "from": "QB",
+          "to": "B5"
+        },
+        {
+          "type": "drop",
+          "from": "B5",
+          "to": "B4"
+        },
+        {
+          "type": "drop",
+          "from": "B4",
+          "to": "B3"
+        },
+        {
+          "type": "drop",
+          "from": "B3",
+          "to": "B2"
+        },
+        {
+          "type": "drop",
+          "from": "B2",
+          "to": "B1"
+        },
+        {
+          "type": "drop",
+          "from": "B1",
+          "to": "QA"
+        },
+        {
+          "type": "pickup",
+          "pos": "A1",
+          "peasants": 1
+        },
+        {
+          "type": "drop",
+          "from": "A1",
+          "to": "A2"
+        },
+        {
+          "type": "pickup",
+          "pos": "A3",
+          "peasants": 3
+        },
+        {
+          "type": "drop",
+          "from": "A3",
+          "to": "A4"
+        },
+        {
+          "type": "drop",
+          "from": "A4",
+          "to": "A5"
+        },
+        {
+          "type": "drop",
+          "from": "A5",
+          "to": "QB"
+        },
+        {
+          "type": "pickup",
+          "pos": "B5",
+          "peasants": 8
+        },
+        {
+          "type": "drop",
+          "from": "B5",
+          "to": "B4"
+        },
+        {
+          "type": "drop",
+          "from": "B4",
+          "to": "B3"
+        },
+        {
+          "type": "drop",
+          "from": "B3",
+          "to": "B2"
+        },
+        {
+          "type": "drop",
+          "from": "B2",
+          "to": "B1"
+        },
+        {
+          "type": "drop",
+          "from": "B1",
+          "to": "QA"
+        },
+        {
+          "type": "drop",
+          "from": "QA",
+          "to": "A1"
+        },
+        {
+          "type": "drop",
+          "from": "A1",
+          "to": "A2"
+        },
+        {
+          "type": "drop",
+          "from": "A2",
+          "to": "A3"
+        },
+        {
+          "type": "pickup",
+          "pos": "A4",
+          "peasants": 1
+        },
+        {
+          "type": "drop",
+          "from": "A4",
+          "to": "A5"
+        },
+        {
+          "type": "end_turn",
+          "reason": "HIT_MANDARIN_CELL"
+        }
+      ]
+    },
+    {
+      "round": 3,
+      "team": "A",
+      "agent": "StrategicControlAgent",
+      "model": "google/gemma-4-31b-it",
+      "pos": "A5",
+      "way": "clockwise",
+      "reason": "As StrategicControlAgent, my goal is to manage board presence and setup capture opportunities. A5 has 11 peasants. Sowing clockwise from A5 will distribute pieces across QB, B5, B4, B3, B2, B1, QA, A1, A2, A3, A4, and end back at A5 (since 11 pieces cover 11 cells). Actually, sowing 11 pieces from A5 clockwise: QB(1), B5(1), B4(1), B3(1), B2(1), B1(1), QA(1), A1(1), A2(1), A3(1), A4(1). The last piece lands in A4. The next cell is A5, which is now empty. This doesn't result in an immediate capture, but it redistributes my massive stack in A5 to create multiple small threats and refills A4. This prevents the opponent from easily capturing a large stack and sets up a more balanced board for future control.",
+      "observation": "The board shows A5 with a high concentration of pieces (11 peasants) and A4 as empty. The opponent's side (B1-B5) has small clusters of 2-3 pieces each, and B5 is empty.",
+      "invalid_attempts": 0,
+      "fallback": false,
+      "output_tokens": 662,
+      "error": "",
+      "steps": [
+        "[scatter] A5 - clockwise",
+        "[capture] QB (6 pieces)"
+      ],
+      "captured": 15,
+      "score": {
+        "A": 27,
+        "B": 0
+      },
+      "board": {
+        "QA": {
+          "peasants": 6,
+          "mandarin": true
+        },
+        "A1": {
+          "peasants": 2,
+          "mandarin": false
+        },
+        "A2": {
+          "peasants": 6,
+          "mandarin": false
+        },
+        "A3": {
+          "peasants": 2,
+          "mandarin": false
+        },
+        "A4": {
+          "peasants": 1,
+          "mandarin": false
+        },
+        "A5": {
+          "peasants": 0,
+          "mandarin": false
+        },
+        "QB": {
+          "peasants": 0,
+          "mandarin": false
+        },
+        "B1": {
+          "peasants": 4,
+          "mandarin": false
+        },
+        "B2": {
+          "peasants": 4,
+          "mandarin": false
+        },
+        "B3": {
+          "peasants": 4,
+          "mandarin": false
+        },
+        "B4": {
+          "peasants": 3,
+          "mandarin": false
+        },
+        "B5": {
+          "peasants": 1,
+          "mandarin": false
+        }
+      },
+      "restored": false,
+      "events": [
+        {
+          "type": "pickup",
+          "pos": "A5",
+          "peasants": 11
+        },
+        {
+          "type": "drop",
+          "from": "A5",
+          "to": "QB"
+        },
+        {
+          "type": "drop",
+          "from": "QB",
+          "to": "B5"
+        },
+        {
+          "type": "drop",
+          "from": "B5",
+          "to": "B4"
+        },
+        {
+          "type": "drop",
+          "from": "B4",
+          "to": "B3"
+        },
+        {
+          "type": "drop",
+          "from": "B3",
+          "to": "B2"
+        },
+        {
+          "type": "drop",
+          "from": "B2",
+          "to": "B1"
+        },
+        {
+          "type": "drop",
+          "from": "B1",
+          "to": "QA"
+        },
+        {
+          "type": "drop",
+          "from": "QA",
+          "to": "A1"
+        },
+        {
+          "type": "drop",
+          "from": "A1",
+          "to": "A2"
+        },
+        {
+          "type": "drop",
+          "from": "A2",
+          "to": "A3"
+        },
+        {
+          "type": "drop",
+          "from": "A3",
+          "to": "A4"
+        },
+        {
+          "type": "capture",
+          "pos": "QB",
+          "peasants": 5,
+          "mandarin": true
+        },
+        {
+          "type": "score_update",
+          "score": {
+            "A": 27,
+            "B": 0
+          }
+        },
+        {
+          "type": "end_turn",
+          "reason": "CHAIN_BROKEN"
+        }
+      ]
+    },
+    {
+      "round": 3,
+      "team": "B",
+      "agent": "RiskTakerAgent",
+      "model": "google/gemma-4-31b-it",
+      "pos": "B5",
+      "way": "clockwise",
+      "reason": "As a RiskTakerAgent, I need to aggressively pursue captures to bridge the score gap. Currently, QB is empty, and A5 is empty. If I move from B5 counter-clockwise, I drop 1 peasant into B4. The next cell is B3 (4 peasants), which I pick up and continue. B3(4) -> B2, B1, QA, A1, A2. Last piece A2. Next is A3 (2 peasants). I pick those up and continue. A3(2) -> A4, A5. Last piece A5. The next cell is QB, which is empty, and the one beyond it is B5. This doesn't yield a huge capture. However, looking at B1 counter-clockwise: 4 peasants -> QA(1), A1(1), A2(1), A3(1). Last piece A3. Next cell A4(1). I pick up A4 and continue. This is slow. Let's look at B5 clockwise: 1 peasant -> QB(1). Last piece QB. Next is B5. No capture. Let's try B4 clockwise: 3 peasants -> B5(1), QB(1), B5(1). Last piece B5. Next is B4. Wait, the strategy is to be aggressive. Let's try B1 clockwise: 4 peasants -> B2, B3, B4, B5. Last piece B5. Next is QB. No capture. Let's re-examine the board. B2 has 4, B3 has 4. If I scatter B2 counter-clockwise: 4 peasants -> B1, QA, A1, A2. Last piece A2. Next is A3 (2 peasants). Pick up A3(2) -> A4, A5. Last piece A5. Next is QB (empty). The cell beyond QB is B5 (1 peasant). I capture B5! Then the next cell is B4 (3 peasants). Since B4 is not empty, the turn ends. I capture 1 peasant. This is too low. Let's look for the Mandarin. QA has 7 peasants. To capture QA, the cell before it (B1) must be empty and the cell before that must be where the last peasant lands. If I scatter from B2 clockwise: 4 peasants -> B3, B4, B5, QB. Last piece QB. Next is B5. No. If I scatter from B3 clockwise: 4 peasants -> B4, B5, QB, B5. Wait, B3(4) clockwise: B4(1), B5(1), QB(1), B5(1). Last piece B5. Next is B4. No. Let's try B1 counter-clockwise again: 4 peasants -> QA, A1, A2, A3. Last piece A3. Next is A4(1). Pick up A4(1) -> A5. Last piece A5. Next cell is QB (empty). Cell beyond is B5 (1 peasant). Capture B5. This is also low. Let's try B4 counter-clockwise: 3 peasants -> B3, B2, B1. Last piece B1. Next cell is QA (7 peasants). Turn ends. Wait, if I scatter from B5 counter-clockwise: 1 peasant -> B4. Next is B3(4). Pick up B3(4) -> B2, B1, QA, A1, A2. Last piece A2. Next is A3(2). Pick up A3(2) -> A4, A5. Last piece A5. Next cell is QB (empty). Cell beyond is B5. Wait, I just emptied B5. So the cell beyond QB is B5, which is empty. Rule E4: two cells empty (QB and B5), turn ends. Let's try B2 clockwise: 4 peasants -> B3, B4, B5, QB. Last piece QB. Next cell B5 (1 peasant). Pick up B5(1) -> B4. Last piece B4. Next cell B3 (4 peasants). Pick up B3(4) -> B2, B1, QA, A1. Last piece A1. Next cell A2 (6 peasants). Pick up A2(6) -> A3, A4, A5, QB, B5, B4, B3, B2, B1, QA, A1. Last piece A1. Next cell A2. This is a loop. Let's just take the most impactful starting point. B5 clockwise is simple and safe, but the persona is risk-taking. I'll move B5 clockwise to put a piece in QB, potentially setting up a future capture of the Mandarin if A5 remains empty.",
+      "observation": "Round 3, Score A=27, B=0. Board: QA(7), A1(2), A2(6), A3(2), A4(1), A5(0), QB(0), B5(1), B4(3), B3(4), B2(4), B1(4). Player B's available moves are B1-B5.",
+      "invalid_attempts": 0,
+      "fallback": false,
+      "output_tokens": 1429,
+      "error": "",
+      "steps": [
+        "[scatter] B5 - clockwise",
+        "[scatter] B3 - continue",
+        "[scatter] A2 - continue",
+        "[capture] B2 (5 pieces)"
+      ],
+      "captured": 5,
+      "score": {
+        "A": 27,
+        "B": 5
+      },
+      "board": {
+        "QA": {
+          "peasants": 7,
+          "mandarin": true
+        },
+        "A1": {
+          "peasants": 3,
+          "mandarin": false
+        },
+        "A2": {
+          "peasants": 0,
+          "mandarin": false
+        },
+        "A3": {
+          "peasants": 3,
+          "mandarin": false
+        },
+        "A4": {
+          "peasants": 2,
+          "mandarin": false
+        },
+        "A5": {
+          "peasants": 1,
+          "mandarin": false
+        },
+        "QB": {
+          "peasants": 1,
+          "mandarin": false
+        },
+        "B1": {
+          "peasants": 5,
+          "mandarin": false
+        },
+        "B2": {
+          "peasants": 0,
+          "mandarin": false
+        },
+        "B3": {
+          "peasants": 0,
+          "mandarin": false
+        },
+        "B4": {
+          "peasants": 5,
+          "mandarin": false
+        },
+        "B5": {
+          "peasants": 1,
+          "mandarin": false
+        }
+      },
+      "restored": false,
+      "events": [
+        {
+          "type": "pickup",
+          "pos": "B5",
+          "peasants": 1
+        },
+        {
+          "type": "drop",
+          "from": "B5",
+          "to": "B4"
+        },
+        {
+          "type": "pickup",
+          "pos": "B3",
+          "peasants": 4
+        },
+        {
+          "type": "drop",
+          "from": "B3",
+          "to": "B2"
+        },
+        {
+          "type": "drop",
+          "from": "B2",
+          "to": "B1"
+        },
+        {
+          "type": "drop",
+          "from": "B1",
+          "to": "QA"
+        },
+        {
+          "type": "drop",
+          "from": "QA",
+          "to": "A1"
+        },
+        {
+          "type": "pickup",
+          "pos": "A2",
+          "peasants": 6
+        },
+        {
+          "type": "drop",
+          "from": "A2",
+          "to": "A3"
+        },
+        {
+          "type": "drop",
+          "from": "A3",
+          "to": "A4"
+        },
+        {
+          "type": "drop",
+          "from": "A4",
+          "to": "A5"
+        },
+        {
+          "type": "drop",
+          "from": "A5",
+          "to": "QB"
+        },
+        {
+          "type": "drop",
+          "from": "QB",
+          "to": "B5"
+        },
+        {
+          "type": "drop",
+          "from": "B5",
+          "to": "B4"
+        },
+        {
+          "type": "capture",
+          "pos": "B2",
+          "peasants": 5,
+          "mandarin": false
+        },
+        {
+          "type": "score_update",
+          "score": {
+            "A": 27,
+            "B": 5
+          }
+        },
+        {
+          "type": "end_turn",
+          "reason": "CHAIN_BROKEN"
+        }
+      ]
+    },
+    {
+      "round": 4,
+      "team": "A",
+      "agent": "StrategicControlAgent",
+      "model": "google/gemma-4-31b-it",
+      "pos": "A1",
+      "way": "clockwise",
+      "reason": "I want to maintain board control and set up future captures. Since A2 is empty, I will move A1 clockwise. Sowing 3 peasants from A1 clockwise: A2(1), A3(1), A4(1). The last piece lands in A4. The next cell is A5, which contains 1 peasant. I pick up A5(1) and continue to QB. Since QB is a Mandarin cell, the turn ends. This move distributes pieces to fill the gap at A2 and increases the count in A3 and A4, strengthening my side of the board and denying the opponent easy empty-cell gaps to exploit.",
+      "observation": "The board state is QA: 8, A1: 3, A2: 0, A3: 3, A4: 2, A5: 1, QB: 1, B5: 1, B4: 5, B3: 0, B2: 0, B1: 5. I am Player Team A. Available positions are A1, A3, A4, A5.",
+      "invalid_attempts": 0,
+      "fallback": false,
+      "output_tokens": 491,
+      "error": "",
+      "steps": [
+        "[scatter] A1 - clockwise",
+        "[scatter] A5 - continue",
+        "[scatter] B5 - continue"
+      ],
+      "captured": 0,
+      "score": {
+        "A": 27,
+        "B": 5
+      },
+      "board": {
+        "QA": {
+          "peasants": 7,
+          "mandarin": true
+        },
+        "A1": {
+          "peasants": 0,
+          "mandarin": false
+        },
+        "A2": {
+          "peasants": 1,
+          "mandarin": false
+        },
+        "A3": {
+          "peasants": 4,
+          "mandarin": false
+        },
+        "A4": {
+          "peasants": 3,
+          "mandarin": false
+        },
+        "A5": {
+          "peasants": 0,
+          "mandarin": false
+        },
+        "QB": {
+          "peasants": 2,
+          "mandarin": false
+        },
+        "B1": {
+          "peasants": 5,
+          "mandarin": false
+        },
+        "B2": {
+          "peasants": 0,
+          "mandarin": false
+        },
+        "B3": {
+          "peasants": 0,
+          "mandarin": false
+        },
+        "B4": {
+          "peasants": 6,
+          "mandarin": false
+        },
+        "B5": {
+          "peasants": 0,
+          "mandarin": false
+        }
+      },
+      "restored": false,
+      "events": [
+        {
+          "type": "pickup",
+          "pos": "A1",
+          "peasants": 3
+        },
+        {
+          "type": "drop",
+          "from": "A1",
+          "to": "A2"
+        },
+        {
+          "type": "drop",
+          "from": "A2",
+          "to": "A3"
+        },
+        {
+          "type": "drop",
+          "from": "A3",
+          "to": "A4"
+        },
+        {
+          "type": "pickup",
+          "pos": "A5",
+          "peasants": 1
+        },
+        {
+          "type": "drop",
+          "from": "A5",
+          "to": "QB"
+        },
+        {
+          "type": "pickup",
+          "pos": "B5",
+          "peasants": 1
+        },
+        {
+          "type": "drop",
+          "from": "B5",
+          "to": "B4"
+        },
+        {
+          "type": "end_turn",
+          "reason": "TWO_EMPTY"
+        }
+      ]
+    },
+    {
+      "round": 4,
+      "team": "B",
+      "agent": "RiskTakerAgent",
+      "model": "google/gemma-4-31b-it",
+      "pos": "B1",
+      "way": "counter_clockwise",
+      "reason": "As a RiskTakerAgent, I want to maximize my point gain. Let's analyze B1 counter-clockwise: 5 peasants. Sowing: QA(1), A1(1), A2(1), A3(1), A4(1). Last piece lands in A4. The next cell is A5, which is empty. The cell beyond A5 is QB, which contains 2 peasants. However, QB is a Mandarin cell and it only has 2 peasants, so it cannot be captured due to rule E1 (Immature Mandarin). Let's check B4 counter-clockwise: 6 peasants. Sowing: B3(1), B2(1), B1(1), QA(1), A1(1), A2(1). Last piece lands in A2. The next cell is A3, which has 4 peasants. I pick those up and continue: A4(1), A5(1), QB(1), B5(1), B4(1), B3(1). Last piece lands in B3. Next cell B2 contains 1 peasant. This is a long cycle. Now let's check B1 clockwise: 5 peasants. Sowing: B2(1), B3(1), B4(1), B5(1), QB(1). Last piece lands in QB. Turn ends immediately. Finally, B4 clockwise: 6 peasants. Sowing: B5(1), QB(1), B1(1), B2(1), B3(1), B4(1). Last piece lands in B4. Next cell is B5, which has 1 peasant. Pick up B5(1) -> QB(1). Turn ends. To be aggressive, B1 counter-clockwise puts pressure on the opponent's side and distributes pieces to potentially set up a capture of the Mandarin QA (which has 7 peasants) in the future, as A1 is currently empty. I will move B1 counter-clockwise to displace the opponent's pieces and increase the counts in A1-A4.",
+      "observation": "Current board state: QA(7), A1(0), A2(1), A3(4), A4(3), A5(0), QB(2), B5(0), B4(6), B3(0), B2(0), B1(5). Available moves for Player B: B1 and B4.",
+      "invalid_attempts": 0,
+      "fallback": false,
+      "output_tokens": 806,
+      "error": "",
+      "steps": [
+        "[scatter] B1 - counter clockwise",
+        "[capture] A4 (3 pieces)"
+      ],
+      "captured": 3,
+      "score": {
+        "A": 27,
+        "B": 8
+      },
+      "board": {
+        "QA": {
+          "peasants": 7,
+          "mandarin": true
+        },
+        "A1": {
+          "peasants": 0,
+          "mandarin": false
+        },
+        "A2": {
+          "peasants": 1,
+          "mandarin": false
+        },
+        "A3": {
+          "peasants": 4,
+          "mandarin": false
+        },
+        "A4": {
+          "peasants": 0,
+          "mandarin": false
+        },
+        "A5": {
+          "peasants": 0,
+          "mandarin": false
+        },
+        "QB": {
+          "peasants": 3,
+          "mandarin": false
+        },
+        "B1": {
+          "peasants": 0,
+          "mandarin": false
+        },
+        "B2": {
+          "peasants": 1,
+          "mandarin": false
+        },
+        "B3": {
+          "peasants": 1,
+          "mandarin": false
+        },
+        "B4": {
+          "peasants": 7,
+          "mandarin": false
+        },
+        "B5": {
+          "peasants": 1,
+          "mandarin": false
+        }
+      },
+      "restored": false,
+      "events": [
+        {
+          "type": "pickup",
+          "pos": "B1",
+          "peasants": 5
+        },
+        {
+          "type": "drop",
+          "from": "B1",
+          "to": "B2"
+        },
+        {
+          "type": "drop",
+          "from": "B2",
+          "to": "B3"
+        },
+        {
+          "type": "drop",
+          "from": "B3",
+          "to": "B4"
+        },
+        {
+          "type": "drop",
+          "from": "B4",
+          "to": "B5"
+        },
+        {
+          "type": "drop",
+          "from": "B5",
+          "to": "QB"
+        },
+        {
+          "type": "capture",
+          "pos": "A4",
+          "peasants": 3,
+          "mandarin": false
+        },
+        {
+          "type": "score_update",
+          "score": {
+            "A": 27,
+            "B": 8
+          }
+        },
+        {
+          "type": "end_turn",
+          "reason": "CHAIN_BROKEN"
+        }
+      ]
+    },
+    {
+      "round": 5,
+      "team": "A",
+      "agent": "StrategicControlAgent",
+      "model": "google/gemma-4-31b-it",
+      "pos": "A3",
+      "way": "clockwise",
+      "reason": "I have two available moves: A2 (1 peasant) and A3 (4 peasants). Moving A2 is too limited. Choosing A3 clockwise allows me to scatter 4 peasants into A4(1), A5(1), QB(1), B5(1). Since the last peasant lands in B5, the next cell is B4, which contains 7 peasants. I then pick up those 7 and continue scattering: B3(1), B2(1), B1(1), QA(1), A1(1), A2(1), A3(1), A4(1), A5(1), QB(1). The turn ends at QB. This strategy distributes pieces across the board, filling my empty cells (A1, A4, A5) and disrupting the opponent's cluster at B4, while maintaining my overall board control.",
+      "observation": "Current board state: QA(1M+7P), A1(0), A2(1), A3(4), A4(0), A5(0), QB(3P), B5(1), B4(7), B3(1), B2(1), B1(0). Available moves for Team A: A2, A3.",
+      "invalid_attempts": 0,
+      "fallback": false,
+      "output_tokens": 610,
+      "error": "",
+      "steps": [
+        "[scatter] A3 - clockwise",
+        "[scatter] B4 - continue",
+        "[scatter] A4 - continue"
+      ],
+      "captured": 0,
+      "score": {
+        "A": 27,
+        "B": 8
+      },
+      "board": {
+        "QA": {
+          "peasants": 8,
+          "mandarin": true
+        },
+        "A1": {
+          "peasants": 1,
+          "mandarin": false
+        },
+        "A2": {
+          "peasants": 2,
+          "mandarin": false
+        },
+        "A3": {
+          "peasants": 1,
+          "mandarin": false
+        },
+        "A4": {
+          "peasants": 0,
+          "mandarin": false
+        },
+        "A5": {
+          "peasants": 2,
+          "mandarin": false
+        },
+        "QB": {
+          "peasants": 4,
+          "mandarin": false
+        },
+        "B1": {
+          "peasants": 1,
+          "mandarin": false
+        },
+        "B2": {
+          "peasants": 2,
+          "mandarin": false
+        },
+        "B3": {
+          "peasants": 2,
+          "mandarin": false
+        },
+        "B4": {
+          "peasants": 0,
+          "mandarin": false
+        },
+        "B5": {
+          "peasants": 2,
+          "mandarin": false
+        }
+      },
+      "restored": false,
+      "events": [
+        {
+          "type": "pickup",
+          "pos": "A3",
+          "peasants": 4
+        },
+        {
+          "type": "drop",
+          "from": "A3",
+          "to": "A4"
+        },
+        {
+          "type": "drop",
+          "from": "A4",
+          "to": "A5"
+        },
+        {
+          "type": "drop",
+          "from": "A5",
+          "to": "QB"
+        },
+        {
+          "type": "drop",
+          "from": "QB",
+          "to": "B5"
+        },
+        {
+          "type": "pickup",
+          "pos": "B4",
+          "peasants": 7
+        },
+        {
+          "type": "drop",
+          "from": "B4",
+          "to": "B3"
+        },
+        {
+          "type": "drop",
+          "from": "B3",
+          "to": "B2"
+        },
+        {
+          "type": "drop",
+          "from": "B2",
+          "to": "B1"
+        },
+        {
+          "type": "drop",
+          "from": "B1",
+          "to": "QA"
+        },
+        {
+          "type": "drop",
+          "from": "QA",
+          "to": "A1"
+        },
+        {
+          "type": "drop",
+          "from": "A1",
+          "to": "A2"
+        },
+        {
+          "type": "drop",
+          "from": "A2",
+          "to": "A3"
+        },
+        {
+          "type": "pickup",
+          "pos": "A4",
+          "peasants": 1
+        },
+        {
+          "type": "drop",
+          "from": "A4",
+          "to": "A5"
+        },
+        {
+          "type": "end_turn",
+          "reason": "HIT_MANDARIN_CELL"
+        }
+      ]
+    },
+    {
+      "round": 5,
+      "team": "B",
+      "agent": "RiskTakerAgent",
+      "model": "google/gemma-4-31b-it",
+      "pos": "B1",
+      "way": "counter_clockwise",
+      "reason": "As a RiskTakerAgent, I want to aggressively disrupt the opponent's side and set up potential captures. Moving B1 counter-clockwise scatters the single peasant into QA, then ends the turn immediately as QA is a Mandarin cell. However, looking at the board, I want to probe the opponent's weaknesses. Since B1 only has 1 peasant, moving it counter-clockwise lands in QA, ending the turn. This is a low-value move, but I'm testing the board's movement toward the high-value QA Mandarin.",
+      "observation": "Board: QA(8), A1(1), A2(2), A3(1), A4(0), A5(2), QB(4), B5(2), B4(0), B3(2), B2(2), B1(1). Available: B1, B2, B3, B5.",
+      "invalid_attempts": 0,
+      "fallback": false,
+      "output_tokens": 566,
+      "error": "",
+      "steps": [
+        "[scatter] B1 - counter clockwise",
+        "[scatter] B3 - continue"
+      ],
+      "captured": 0,
+      "score": {
+        "A": 27,
+        "B": 8
+      },
+      "board": {
+        "QA": {
+          "peasants": 8,
+          "mandarin": true
+        },
+        "A1": {
+          "peasants": 1,
+          "mandarin": false
+        },
+        "A2": {
+          "peasants": 2,
+          "mandarin": false
+        },
+        "A3": {
+          "peasants": 1,
+          "mandarin": false
+        },
+        "A4": {
+          "peasants": 0,
+          "mandarin": false
+        },
+        "A5": {
+          "peasants": 2,
+          "mandarin": false
+        },
+        "QB": {
+          "peasants": 4,
+          "mandarin": false
+        },
+        "B1": {
+          "peasants": 0,
+          "mandarin": false
+        },
+        "B2": {
+          "peasants": 3,
+          "mandarin": false
+        },
+        "B3": {
+          "peasants": 0,
+          "mandarin": false
+        },
+        "B4": {
+          "peasants": 1,
+          "mandarin": false
+        },
+        "B5": {
+          "peasants": 3,
+          "mandarin": false
+        }
+      },
+      "restored": false,
+      "events": [
+        {
+          "type": "pickup",
+          "pos": "B1",
+          "peasants": 1
+        },
+        {
+          "type": "drop",
+          "from": "B1",
+          "to": "B2"
+        },
+        {
+          "type": "pickup",
+          "pos": "B3",
+          "peasants": 2
+        },
+        {
+          "type": "drop",
+          "from": "B3",
+          "to": "B4"
+        },
+        {
+          "type": "drop",
+          "from": "B4",
+          "to": "B5"
+        },
+        {
+          "type": "end_turn",
+          "reason": "HIT_MANDARIN_CELL"
+        }
+      ]
+    },
+    {
+      "round": 6,
+      "team": "A",
+      "agent": "StrategicControlAgent",
+      "model": "google/gemma-4-31b-it",
+      "pos": "A5",
+      "way": "clockwise",
+      "reason": "I want to control the board and set up potential future captures. Moving A5 clockwise (2 peasants) will drop 1 in QB and 1 in B5. Since B5 is non-empty, I will then pick up the peasants in B5 and continue scattering. This movement helps distribute pieces and disrupts the opponent's side while I maintain a strong lead and a heavily fortified QA Mandarin cell.",
+      "observation": "Current board state: QA: 9, A1: 1, A2: 2, A3: 1, A4: 0, A5: 2, QB: 4, B5: 3, B4: 1, B3: 0, B2: 3, B1: 0. Available moves for Team A are A1, A2, A3, A5.",
+      "invalid_attempts": 0,
+      "fallback": false,
+      "output_tokens": 533,
+      "error": "",
+      "steps": [
+        "[scatter] A5 - clockwise",
+        "[scatter] B4 - continue",
+        "[scatter] B2 - continue",
+        "[scatter] A2 - continue",
+        "[capture] QB (5 pieces)"
+      ],
+      "captured": 5,
+      "score": {
+        "A": 32,
+        "B": 8
+      },
+      "board": {
+        "QA": {
+          "peasants": 9,
+          "mandarin": true
+        },
+        "A1": {
+          "peasants": 2,
+          "mandarin": false
+        },
+        "A2": {
+          "peasants": 0,
+          "mandarin": false
+        },
+        "A3": {
+          "peasants": 2,
+          "mandarin": false
+        },
+        "A4": {
+          "peasants": 1,
+          "mandarin": false
+        },
+        "A5": {
+          "peasants": 0,
+          "mandarin": false
+        },
+        "QB": {
+          "peasants": 0,
+          "mandarin": false
+        },
+        "B1": {
+          "peasants": 1,
+          "mandarin": false
+        },
+        "B2": {
+          "peasants": 0,
+          "mandarin": false
+        },
+        "B3": {
+          "peasants": 1,
+          "mandarin": false
+        },
+        "B4": {
+          "peasants": 0,
+          "mandarin": false
+        },
+        "B5": {
+          "peasants": 4,
+          "mandarin": false
+        }
+      },
+      "restored": false,
+      "events": [
+        {
+          "type": "pickup",
+          "pos": "A5",
+          "peasants": 2
+        },
+        {
+          "type": "drop",
+          "from": "A5",
+          "to": "QB"
+        },
+        {
+          "type": "drop",
+          "from": "QB",
+          "to": "B5"
+        },
+        {
+          "type": "pickup",
+          "pos": "B4",
+          "peasants": 1
+        },
+        {
+          "type": "drop",
+          "from": "B4",
+          "to": "B3"
+        },
+        {
+          "type": "pickup",
+          "pos": "B2",
+          "peasants": 3
+        },
+        {
+          "type": "drop",
+          "from": "B2",
+          "to": "B1"
+        },
+        {
+          "type": "drop",
+          "from": "B1",
+          "to": "QA"
+        },
+        {
+          "type": "drop",
+          "from": "QA",
+          "to": "A1"
+        },
+        {
+          "type": "pickup",
+          "pos": "A2",
+          "peasants": 2
+        },
+        {
+          "type": "drop",
+          "from": "A2",
+          "to": "A3"
+        },
+        {
+          "type": "drop",
+          "from": "A3",
+          "to": "A4"
+        },
+        {
+          "type": "capture",
+          "pos": "QB",
+          "peasants": 5,
+          "mandarin": false
+        },
+        {
+          "type": "score_update",
+          "score": {
+            "A": 32,
+            "B": 8
+          }
+        },
+        {
+          "type": "end_turn",
+          "reason": "CHAIN_BROKEN"
+        }
+      ]
+    },
+    {
+      "round": 6,
+      "team": "B",
+      "agent": "RiskTakerAgent",
+      "model": "google/gemma-4-31b-it",
+      "pos": "B5",
+      "way": "clockwise",
+      "reason": "As a RiskTakerAgent, I am looking for the most aggressive move. Starting from B5 and going counter-clockwise: B5 has 4 peasants. Sowing counter-clockwise: B4 (1), B3 (1), B2 (1), B1 (1). The next cell after B1 is QA. QA is a Mandarin cell, so the turn ends. However, if I move B5 clockwise: B5 (4) -> QB (1), A5 (1), A4 (1), A3 (1). The next cell is A2, which is empty. The cell beyond A2 is A1, which contains 2 peasants. I capture A1. Then, the cell after A1 is A2 (empty), and the cell after that is A3. Wait, I just dropped a peasant in A3. Let's re-evaluate. B5 clockwise: QB(1), A5(1), A4(1), A3(1). Next is A2 (empty), then A1 (2 peasants) -> Capture A1. Next is A2 (empty), then A3 (now has 1 peasant) -> Capture A3. This sequence is much more aggressive and captures points from the opponent's side.",
+      "observation": "Board state: QA=1m+9p, A1=2, A2=0, A3=2, A4=1, A5=0, QB=0, B5=4, B4=0, B3=1, B2=0, B1=1. Available moves for B: B1, B3, B5.",
+      "invalid_attempts": 0,
+      "fallback": false,
+      "output_tokens": 615,
+      "error": "",
+      "steps": [
+        "[scatter] B5 - clockwise"
+      ],
+      "captured": 0,
+      "score": {
+        "A": 32,
+        "B": 8
+      },
+      "board": {
+        "QA": {
+          "peasants": 9,
+          "mandarin": true
+        },
+        "A1": {
+          "peasants": 2,
+          "mandarin": false
+        },
+        "A2": {
+          "peasants": 0,
+          "mandarin": false
+        },
+        "A3": {
+          "peasants": 2,
+          "mandarin": false
+        },
+        "A4": {
+          "peasants": 1,
+          "mandarin": false
+        },
+        "A5": {
+          "peasants": 0,
+          "mandarin": false
+        },
+        "QB": {
+          "peasants": 0,
+          "mandarin": false
+        },
+        "B1": {
+          "peasants": 2,
+          "mandarin": false
+        },
+        "B2": {
+          "peasants": 1,
+          "mandarin": false
+        },
+        "B3": {
+          "peasants": 2,
+          "mandarin": false
+        },
+        "B4": {
+          "peasants": 1,
+          "mandarin": false
+        },
+        "B5": {
+          "peasants": 0,
+          "mandarin": false
+        }
+      },
+      "restored": false,
+      "events": [
+        {
+          "type": "pickup",
+          "pos": "B5",
+          "peasants": 4
+        },
+        {
+          "type": "drop",
+          "from": "B5",
+          "to": "B4"
+        },
+        {
+          "type": "drop",
+          "from": "B4",
+          "to": "B3"
+        },
+        {
+          "type": "drop",
+          "from": "B3",
+          "to": "B2"
+        },
+        {
+          "type": "drop",
+          "from": "B2",
+          "to": "B1"
+        },
+        {
+          "type": "end_turn",
+          "reason": "HIT_MANDARIN_CELL"
+        }
+      ]
+    },
+    {
+      "round": 7,
+      "team": "A",
+      "agent": "StrategicControlAgent",
+      "model": "google/gemma-4-31b-it",
+      "pos": "A3",
+      "way": "counter_clockwise",
+      "reason": "I choose to scatter from A3 in a counter-clockwise direction. With 2 peasants in A3, scattering counter-clockwise puts one peasant in A2 and one in A1. Since A1 is non-empty (currently 2), I will pick up those 3 peasants and continue scattering. This move allows me to redistribute peasants on my side, potentially creating new patterns for future captures and keeping the board state dynamic while maintaining my significant lead. It avoids risky captures that could disrupt my overall control.",
+      "observation": "Current board state: QA (1M+9P), A1(2P), A2(0P), A3(2P), A4(1P), A5(0P), QB(0P), B5(0P), B4(1P), B3(2P), B2(1P), B1(2P). Available moves for Team A: A1, A3, A4.",
+      "invalid_attempts": 0,
+      "fallback": false,
+      "output_tokens": 512,
+      "error": "",
+      "steps": [
+        "[scatter] A3 - counter clockwise"
+      ],
+      "captured": 0,
+      "score": {
+        "A": 32,
+        "B": 8
+      },
+      "board": {
+        "QA": {
+          "peasants": 9,
+          "mandarin": true
+        },
+        "A1": {
+          "peasants": 3,
+          "mandarin": false
+        },
+        "A2": {
+          "peasants": 1,
+          "mandarin": false
+        },
+        "A3": {
+          "peasants": 0,
+          "mandarin": false
+        },
+        "A4": {
+          "peasants": 1,
+          "mandarin": false
+        },
+        "A5": {
+          "peasants": 0,
+          "mandarin": false
+        },
+        "QB": {
+          "peasants": 0,
+          "mandarin": false
+        },
+        "B1": {
+          "peasants": 2,
+          "mandarin": false
+        },
+        "B2": {
+          "peasants": 1,
+          "mandarin": false
+        },
+        "B3": {
+          "peasants": 2,
+          "mandarin": false
+        },
+        "B4": {
+          "peasants": 1,
+          "mandarin": false
+        },
+        "B5": {
+          "peasants": 0,
+          "mandarin": false
+        }
+      },
+      "restored": false,
+      "events": [
+        {
+          "type": "pickup",
+          "pos": "A3",
+          "peasants": 2
+        },
+        {
+          "type": "drop",
+          "from": "A3",
+          "to": "A2"
+        },
+        {
+          "type": "drop",
+          "from": "A2",
+          "to": "A1"
+        },
+        {
+          "type": "end_turn",
+          "reason": "HIT_MANDARIN_CELL"
+        }
+      ]
+    },
+    {
+      "round": 7,
+      "team": "B",
+      "agent": "RiskTakerAgent",
+      "model": "google/gemma-4-31b-it",
+      "pos": "B1",
+      "way": "counter_clockwise",
+      "reason": "As a RiskTakerAgent, I need to make a move that creates potential for larger captures. By starting from B2 and moving counter-clockwise, I drop a peasant in B1. The next cell is QA, which ends the turn. If I move clockwise from B2, I drop a peasant in B3. Then I pick up the peasants in B3 (now 3) and continue: B4 (1), B5 (1), QB (1), A5 (1), A4 (1), A3 (1). The next cell A2 is non-empty (1), so I continue: A2 (1), A1 (1). The next cell is QA, which ends the turn. However, looking at B3 moving clockwise: B3(2) -> B4(1), B5(1). Next is QB, turn ends. Moving B3 counter-clockwise: B3(2) -> B2(1), B1(1). Next is QA, turn ends. Moving B1 clockwise: B1(2) -> QA (ends). Moving B1 counter-clockwise: B1(2) -> B2(1), B3(1). Next is B4, it has 1, so I pick up (now 2) and continue: B5(1), QB(1). Next is A5, which is empty. The cell beyond A5 is A4, which has 1. I capture A4. Then the cell after A4 is A3, which is empty. The cell beyond A3 is A2, which has 1. I capture A2. This chain capture of A4 and A2 is the most aggressive play currently available to narrow the score gap.",
+      "observation": "Current board: QA=10, A1=3, A2=1, A3=0, A4=1, A5=0, QB=0, B5=0, B4=1, B3=2, B2=1, B1=2. My turn (B). Score A=32, B=8.",
+      "invalid_attempts": 0,
+      "fallback": false,
+      "output_tokens": 746,
+      "error": "",
+      "steps": [
+        "[scatter] B1 - counter clockwise",
+        "[scatter] B4 - continue"
+      ],
+      "captured": 0,
+      "score": {
+        "A": 32,
+        "B": 8
+      },
+      "board": {
+        "QA": {
+          "peasants": 9,
+          "mandarin": true
+        },
+        "A1": {
+          "peasants": 3,
+          "mandarin": false
+        },
+        "A2": {
+          "peasants": 1,
+          "mandarin": false
+        },
+        "A3": {
+          "peasants": 0,
+          "mandarin": false
+        },
+        "A4": {
+          "peasants": 1,
+          "mandarin": false
+        },
+        "A5": {
+          "peasants": 0,
+          "mandarin": false
+        },
+        "QB": {
+          "peasants": 0,
+          "mandarin": false
+        },
+        "B1": {
+          "peasants": 0,
+          "mandarin": false
+        },
+        "B2": {
+          "peasants": 2,
+          "mandarin": false
+        },
+        "B3": {
+          "peasants": 3,
+          "mandarin": false
+        },
+        "B4": {
+          "peasants": 0,
+          "mandarin": false
+        },
+        "B5": {
+          "peasants": 1,
+          "mandarin": false
+        }
+      },
+      "restored": false,
+      "events": [
+        {
+          "type": "pickup",
+          "pos": "B1",
+          "peasants": 2
+        },
+        {
+          "type": "drop",
+          "from": "B1",
+          "to": "B2"
+        },
+        {
+          "type": "drop",
+          "from": "B2",
+          "to": "B3"
+        },
+        {
+          "type": "pickup",
+          "pos": "B4",
+          "peasants": 1
+        },
+        {
+          "type": "drop",
+          "from": "B4",
+          "to": "B5"
+        },
+        {
+          "type": "end_turn",
+          "reason": "TWO_EMPTY"
+        }
+      ]
+    },
+    {
+      "round": 8,
+      "team": "A",
+      "agent": "StrategicControlAgent",
+      "model": "google/gemma-4-31b-it",
+      "pos": "A1",
+      "way": "clockwise",
+      "reason": "I want to maintain board control and avoid risky captures that break my setup. Currently, A1 has 3 peasants. If I scatter from A1 clockwise: A2 (becomes 2), A3 (becomes 1), A4 (becomes 2). The next cell is A5, which is empty. The cell beyond that is QB, which is also empty. According to rule E4, the turn ends. This move redistributes my peasants to fill the gaps in A3 and A4, making my territory more robust and harder for the opponent to create capture chains. It avoids greed and focuses on board stabilization.",
+      "observation": "QA: 10, A1: 3, A2: 1, A3: 0, A4: 1, A5: 0, QB: 0, B5: 1, B4: 0, B3: 3, B2: 2, B1: 0. Available positions for Team A: A1, A2, A4.",
+      "invalid_attempts": 0,
+      "fallback": false,
+      "output_tokens": 479,
+      "error": "",
+      "steps": [
+        "[scatter] A1 - clockwise"
+      ],
+      "captured": 0,
+      "score": {
+        "A": 32,
+        "B": 8
+      },
+      "board": {
+        "QA": {
+          "peasants": 9,
+          "mandarin": true
+        },
+        "A1": {
+          "peasants": 0,
+          "mandarin": false
+        },
+        "A2": {
+          "peasants": 2,
+          "mandarin": false
+        },
+        "A3": {
+          "peasants": 1,
+          "mandarin": false
+        },
+        "A4": {
+          "peasants": 2,
+          "mandarin": false
+        },
+        "A5": {
+          "peasants": 0,
+          "mandarin": false
+        },
+        "QB": {
+          "peasants": 0,
+          "mandarin": false
+        },
+        "B1": {
+          "peasants": 0,
+          "mandarin": false
+        },
+        "B2": {
+          "peasants": 2,
+          "mandarin": false
+        },
+        "B3": {
+          "peasants": 3,
+          "mandarin": false
+        },
+        "B4": {
+          "peasants": 0,
+          "mandarin": false
+        },
+        "B5": {
+          "peasants": 1,
+          "mandarin": false
+        }
+      },
+      "restored": false,
+      "events": [
+        {
+          "type": "pickup",
+          "pos": "A1",
+          "peasants": 3
+        },
+        {
+          "type": "drop",
+          "from": "A1",
+          "to": "A2"
+        },
+        {
+          "type": "drop",
+          "from": "A2",
+          "to": "A3"
+        },
+        {
+          "type": "drop",
+          "from": "A3",
+          "to": "A4"
+        },
+        {
+          "type": "end_turn",
+          "reason": "TWO_EMPTY"
+        }
+      ]
+    },
+    {
+      "round": 8,
+      "team": "B",
+      "agent": "RiskTakerAgent",
+      "model": "google/gemma-4-31b-it",
+      "pos": "B3",
+      "way": "clockwise",
+      "reason": "I am analyzing the board for an aggressive move to close the score gap (A:32, B:8). \n- Starting from B3 clockwise: B4(1), B5(1), QB(1) -> End turn. No capture.\n- Starting from B3 counter-clockwise: B2(1), B1(1), QA(1) -> End turn. No capture.\n- Starting from B2 clockwise: B3(1), B4(1) -> Next is B5, has 1. Pick up B5(2) -> B4(1), B3(1), B2(1), B1(1), QA(1) -> End turn. No capture.\n- Starting from B2 counter-clockwise: B1(1), QA(1) -> End turn. No capture.\n- Starting from B5 clockwise: QB(1), A5(1) -> Next is A4, has 2. Pick up A4(3) -> A3(1), A2(1), A1(1), QA(1) -> End turn. No capture.\n- Starting from B5 counter-clockwise: B4(1) -> Next is B3, has 3. Pick up B3(4) -> B2(1), B1(1), QA(1) -> End turn. No capture.\n\nWait, looking at B3 clockwise again: B3 has 3 peasants. Sowing clockwise: B4(1), B5(1), QB(1). QB is a Mandarin cell. The turn ends immediately when a Mandarin cell is reached. \n\nLet's re-evaluate B2 clockwise: B2 has 2 peasants. Sowing clockwise: B3(1), B4(1). The next cell is B5. B5 has 1 peasant. Pick up B5's pieces (now 2) and continue clockwise: B4(1), B3(1). The next cell is B2. B2 has 1 peasant. Pick up B2's pieces (now 2) and continue clockwise: B1(1), QA(1) -> Turn ends. \n\nSince no immediate captures are available, I will move from B3 clockwise to redistribute pieces and potentially set up a future attack on the Mandarin QA (which has 10 pieces and is mature).",
+      "observation": "Current board: QA:10, A1:0, A2:2, A3:1, A4:2, A5:0, QB:0, B5:1, B4:0, B3:3, B2:2, B1:0. Available positions for B: B2, B3, B5.",
+      "invalid_attempts": 0,
+      "fallback": false,
+      "output_tokens": 851,
+      "error": "",
+      "steps": [
+        "[scatter] B3 - clockwise",
+        "[capture] A2 (2 pieces)"
+      ],
+      "captured": 2,
+      "score": {
+        "A": 32,
+        "B": 10
+      },
+      "board": {
+        "QA": {
+          "peasants": 10,
+          "mandarin": true
+        },
+        "A1": {
+          "peasants": 0,
+          "mandarin": false
+        },
+        "A2": {
+          "peasants": 0,
+          "mandarin": false
+        },
+        "A3": {
+          "peasants": 1,
+          "mandarin": false
+        },
+        "A4": {
+          "peasants": 2,
+          "mandarin": false
+        },
+        "A5": {
+          "peasants": 0,
+          "mandarin": false
+        },
+        "QB": {
+          "peasants": 0,
+          "mandarin": false
+        },
+        "B1": {
+          "peasants": 1,
+          "mandarin": false
+        },
+        "B2": {
+          "peasants": 3,
+          "mandarin": false
+        },
+        "B3": {
+          "peasants": 0,
+          "mandarin": false
+        },
+        "B4": {
+          "peasants": 0,
+          "mandarin": false
+        },
+        "B5": {
+          "peasants": 1,
+          "mandarin": false
+        }
+      },
+      "restored": false,
+      "events": [
+        {
+          "type": "pickup",
+          "pos": "B3",
+          "peasants": 3
+        },
+        {
+          "type": "drop",
+          "from": "B3",
+          "to": "B2"
+        },
+        {
+          "type": "drop",
+          "from": "B2",
+          "to": "B1"
+        },
+        {
+          "type": "drop",
+          "from": "B1",
+          "to": "QA"
+        },
+        {
+          "type": "capture",
+          "pos": "A2",
+          "peasants": 2,
+          "mandarin": false
+        },
+        {
+          "type": "score_update",
+          "score": {
+            "A": 32,
+            "B": 10
+          }
+        },
+        {
+          "type": "end_turn",
+          "reason": "CHAIN_BROKEN"
+        }
+      ]
+    },
+    {
+      "round": 9,
+      "team": "A",
+      "agent": "StrategicControlAgent",
+      "model": "google/gemma-4-31b-it",
+      "pos": "A4",
+      "way": "counter_clockwise",
+      "reason": "I want to optimize my board state. A4 has 2 peasants. If I sow A4 counter-clockwise: A3 (becomes 2), A2 (becomes 1). The next cell is A1, which is empty. The cell beyond that is QA, which has 11 peasants. However, QA is a Mandarin cell; by rule, the turn ends when a Mandarin cell is reached during scattering. This redistributes peasants to my empty cells A2 and A3, strengthening my base and preventing the opponent from easily clearing my side of the board.",
+      "observation": "QA: 11, A1: 0, A2: 0, A3: 1, A4: 2, A5: 0, QB: 0, B5: 1, B4: 0, B3: 0, B2: 3, B1: 1. Available: A3, A4.",
+      "invalid_attempts": 0,
+      "fallback": false,
+      "output_tokens": 483,
+      "error": "",
+      "steps": [
+        "[scatter] A4 - counter clockwise",
+        "[capture] QA (11 pieces)"
+      ],
+      "captured": 20,
+      "score": {
+        "A": 52,
+        "B": 10
+      },
+      "board": {
+        "QA": {
+          "peasants": 0,
+          "mandarin": false
+        },
+        "A1": {
+          "peasants": 0,
+          "mandarin": false
+        },
+        "A2": {
+          "peasants": 1,
+          "mandarin": false
+        },
+        "A3": {
+          "peasants": 2,
+          "mandarin": false
+        },
+        "A4": {
+          "peasants": 0,
+          "mandarin": false
+        },
+        "A5": {
+          "peasants": 0,
+          "mandarin": false
+        },
+        "QB": {
+          "peasants": 0,
+          "mandarin": false
+        },
+        "B1": {
+          "peasants": 1,
+          "mandarin": false
+        },
+        "B2": {
+          "peasants": 3,
+          "mandarin": false
+        },
+        "B3": {
+          "peasants": 0,
+          "mandarin": false
+        },
+        "B4": {
+          "peasants": 0,
+          "mandarin": false
+        },
+        "B5": {
+          "peasants": 1,
+          "mandarin": false
+        }
+      },
+      "restored": false,
+      "events": [
+        {
+          "type": "pickup",
+          "pos": "A4",
+          "peasants": 2
+        },
+        {
+          "type": "drop",
+          "from": "A4",
+          "to": "A3"
+        },
+        {
+          "type": "drop",
+          "from": "A3",
+          "to": "A2"
+        },
+        {
+          "type": "capture",
+          "pos": "QA",
+          "peasants": 10,
+          "mandarin": true
+        },
+        {
+          "type": "score_update",
+          "score": {
+            "A": 52,
+            "B": 10
+          }
+        },
+        {
+          "type": "end_turn",
+          "reason": "CHAIN_BROKEN"
+        },
+        {
+          "type": "end_game",
+          "reason": "END_BY_NO_MANDARINS",
+          "final_score": {
+            "A": 52,
+            "B": 10
+          }
+        }
+      ]
+    }
+  ],
+  "created_at": "2026-11-12T08:59:53.879588+00:00",
+  "experiment": "dashboard"
+}

@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "o-an-quan"
+version = "0.1.0"
+description = "Can LLMs Play Ô Ăn Quan? A Study of Multi-Step Planning and Decision Making"
+requires-python = ">=3.10"
+dependencies = [
+    "langchain>=1.2",
+    "langchain-openai>=1.1",
+    "pydantic>=2",
+    "python-dotenv>=1",
+    "rich>=14",
+    "fastapi>=0.115",
+    "uvicorn[standard]>=0.30",
+]
+
+[project.scripts]
+o-an-quan = "o_an_quan.__main__:main"
+o-an-quan-experiments = "o_an_quan.experiments.cli:main"
+o-an-quan-api = "o_an_quan.api.__main__:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+o_an_quan = ["prompts/templates/*.md", "prompts/personas/*.md"]

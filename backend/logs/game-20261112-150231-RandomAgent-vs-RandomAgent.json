@@ -1,0 +1,2045 @@
+{
+  "schema": "o-an-quan/game-log@1",
+  "config": {
+    "max_rounds": 25,
+    "seed": 0,
+    "agents": {
+      "A": {
+        "type": "random",
+        "model": "random",
+        "persona": null
+      },
+      "B": {
+        "type": "random",
+        "model": "random",
+        "persona": null
+      }
+    }
+  },
+  "agent_a": "RandomAgent",
+  "agent_b": "RandomAgent",
+  "model_a": "random",
+  "model_b": "random",
+  "rounds_played": 7,
+  "end_reason": "END_BY_NO_MANDARINS",
+  "final_score": {
+    "A": 20,
+    "B": 46
+  },
+  "winner": "B",
+  "round_scores": [
+    {
+      "A": 6,
+      "B": 6
+    },
+    {
+      "A": 6,
+      "B": 6
+    },
+    {
+      "A": 9,
+      "B": 6
+    },
+    {
+      "A": 9,
+      "B": 21
+    },
+    {
+      "A": 11,
+      "B": 22
+    },
+    {
+      "A": 15,
+      "B": 23
+    },
+    {
+      "A": 15,
+      "B": 43
+    }
+  ],
+  "initial_board": {
+    "QA": {
+      "peasants": 0,
+      "mandarin": true
+    },
+    "A1": {
+      "peasants": 5,
+      "mandarin": false
+    },
+    "A2": {
+      "peasants": 5,
+      "mandarin": false
+    },
+    "A3": {
+      "peasants": 5,
+      "mandarin": false
+    },
+    "A4": {
+      "peasants": 5,
+      "mandarin": false
+    },
+    "A5": {
+      "peasants": 5,
+      "mandarin": false
+    },
+    "QB": {
+      "peasants": 0,
+      "mandarin": true
+    },
+    "B1": {
+      "peasants": 5,
+      "mandarin": false
+    },
+    "B2": {
+      "peasants": 5,
+      "mandarin": false
+    },
+    "B3": {
+      "peasants": 5,
+      "mandarin": false
+    },
+    "B4": {
+      "peasants": 5,
+      "mandarin": false
+    },
+    "B5": {
+      "peasants": 5,
+      "mandarin": false
+    }
+  },
+  "final_board": {
+    "QA": {
+      "peasants": 0,
+      "mandarin": false
+    },
+    "A1": {
+      "peasants": 0,
+      "mandarin": false
+    },
+    "A2": {
+      "peasants": 0,
+      "mandarin": false
+    },
+    "A3": {
+      "peasants": 0,
+      "mandarin": false
+    },
+    "A4": {
+      "peasants": 0,
+      "mandarin": false
+    },
+    "A5": {
+      "peasants": 0,
+      "mandarin": false
+    },
+    "QB": {
+      "peasants": 4,
+      "mandarin": false
+    },
+    "B1": {
+      "peasants": 0,
+      "mandarin": false
+    },
+    "B2": {
+      "peasants": 0,
+      "mandarin": false
+    },
+    "B3": {
+      "peasants": 0,
+      "mandarin": false
+    },
+    "B4": {
+      "peasants": 0,
+      "mandarin": false
+    },
+    "B5": {
+      "peasants": 0,
+      "mandarin": false
+    }
+  },
+  "turns": [
+    {
+      "round": 1,
+      "team": "A",
+      "agent": "RandomAgent",
+      "model": "random",
+      "pos": "A4",
+      "way": "counter_clockwise",
+      "reason": "Random legal move.",
+      "observation": "",
+      "invalid_attempts": 0,
+      "fallback": false,
+      "output_tokens": 0,
+      "error": "",
+      "steps": [
+        "[scatter] A4 - counter clockwise",
+        "[scatter] B2 - continue",
+        "[capture] A3 (6 pieces)"
+      ],
+      "captured": 6,
+      "score": {
+        "A": 6,
+        "B": 0
+      },
+      "board": {
+        "QA": {
+          "peasants": 1,
+          "mandarin": true
+        },
+        "A1": {
+          "peasants": 6,
+          "mandarin": false
+        },
+        "A2": {
+          "peasants": 6,
+          "mandarin": false
+        },
+        "A3": {
+          "peasants": 0,
+          "mandarin": false
+        },
+        "A4": {
+          "peasants": 0,
+          "mandarin": false
+        },
+        "A5": {
+          "peasants": 6,
+          "mandarin": false
+        },
+        "QB": {
+          "peasants": 1,
+          "mandarin": true
+        },
+        "B1": {
+          "peasants": 6,
+          "mandarin": false
+        },
+        "B2": {
+          "peasants": 0,
+          "mandarin": false
+        },
+        "B3": {
+          "peasants": 6,
+          "mandarin": false
+        },
+        "B4": {
+          "peasants": 6,
+          "mandarin": false
+        },
+        "B5": {
+          "peasants": 6,
+          "mandarin": false
+        }
+      },
+      "restored": false,
+      "events": [
+        {
+          "type": "pickup",
+          "pos": "A4",
+          "peasants": 5
+        },
+        {
+          "type": "drop",
+          "from": "A4",
+          "to": "A3"
+        },
+        {
+          "type": "drop",
+          "from": "A3",
+          "to": "A2"
+        },
+        {
+          "type": "drop",
+          "from": "A2",
+          "to": "A1"
+        },
+        {
+          "type": "drop",
+          "from": "A1",
+          "to": "QA"
+        },
+        {
+          "type": "drop",
+          "from": "QA",
+          "to": "B1"
+        },
+        {
+          "type": "pickup",
+          "pos": "B2",
+          "peasants": 5
+        },
+        {
+          "type": "drop",
+          "from": "B2",
+          "to": "B3"
+        },
+        {
+          "type": "drop",
+          "from": "B3",
+          "to": "B4"
+        },
+        {
+          "type": "drop",
+          "from": "B4",
+          "to": "B5"
+        },
+        {
+          "type": "drop",
+          "from": "B5",
+          "to": "QB"
+        },
+        {
+          "type": "drop",
+          "from": "QB",
+          "to": "A5"
+        },
+        {
+          "type": "capture",
+          "pos": "A3",
+          "peasants": 6,
+          "mandarin": false
+        },
+        {
+          "type": "score_update",
+          "score": {
+            "A": 6,
+            "B": 0
+          }
+        },
+        {
+          "type": "end_turn",
+          "reason": "CHAIN_BROKEN"
+        }
+      ]
+    },
+    {
+      "round": 1,
+      "team": "B",
+      "agent": "RandomAgent",
+      "model": "random",
+      "pos": "B3",
+      "way": "clockwise",
+      "reason": "Random legal move.",
+      "observation": "",
+      "invalid_attempts": 0,
+      "fallback": false,
+      "output_tokens": 0,
+      "error": "",
+      "steps": [
+        "[scatter] B3 - clockwise",
+        "[capture] A5 (6 pieces)"
+      ],
+      "captured": 6,
+      "score": {
+        "A": 6,
+        "B": 6
+      },
+      "board": {
+        "QA": {
+          "peasants": 2,
+          "mandarin": true
+        },
+        "A1": {
+          "peasants": 7,
+          "mandarin": false
+        },
+        "A2": {
+          "peasants": 7,
+          "mandarin": false
+        },
+        "A3": {
+          "peasants": 1,
+          "mandarin": false
+        },
+        "A4": {
+          "peasants": 0,
+          "mandarin": false
+        },
+        "A5": {
+          "peasants": 0,
+          "mandarin": false
+        },
+        "QB": {
+          "peasants": 1,
+          "mandarin": true
+        },
+        "B1": {
+          "peasants": 7,
+          "mandarin": false
+        },
+        "B2": {
+          "peasants": 1,
+          "mandarin": false
+        },
+        "B3": {
+          "peasants": 0,
+          "mandarin": false
+        },
+        "B4": {
+          "peasants": 6,
+          "mandarin": false
+        },
+        "B5": {
+          "peasants": 6,
+          "mandarin": false
+        }
+      },
+      "restored": false,
+      "events": [
+        {
+          "type": "pickup",
+          "pos": "B3",
+          "peasants": 6
+        },
+        {
+          "type": "drop",
+          "from": "B3",
+          "to": "B2"
+        },
+        {
+          "type": "drop",
+          "from": "B2",
+          "to": "B1"
+        },
+        {
+          "type": "drop",
+          "from": "B1",
+          "to": "QA"
+        },
+        {
+          "type": "drop",
+          "from": "QA",
+          "to": "A1"
+        },
+        {
+          "type": "drop",
+          "from": "A1",
+          "to": "A2"
+        },
+        {
+          "type": "drop",
+          "from": "A2",
+          "to": "A3"
+        },
+        {
+          "type": "capture",
+          "pos": "A5",
+          "peasants": 6,
+          "mandarin": false
+        },
+        {
+          "type": "score_update",
+          "score": {
+            "A": 6,
+            "B": 6
+          }
+        },
+        {
+          "type": "end_turn",
+          "reason": "CHAIN_BROKEN"
+        }
+      ]
+    },
+    {
+      "round": 2,
+      "team": "A",
+      "agent": "RandomAgent",
+      "model": "random",
+      "pos": "A1",
+      "way": "counter_clockwise",
+      "reason": "Random legal move.",
+      "observation": "",
+      "invalid_attempts": 0,
+      "fallback": false,
+      "output_tokens": 0,
+      "error": "",
+      "steps": [
+        "[scatter] A1 - counter clockwise"
+      ],
+      "captured": 0,
+      "score": {
+        "A": 6,
+        "B": 6
+      },
+      "board": {
+        "QA": {
+          "peasants": 3,
+          "mandarin": true
+        },
+        "A1": {
+          "peasants": 0,
+          "mandarin": false
+        },
+        "A2": {
+          "peasants": 7,
+          "mandarin": false
+        },
+        "A3": {
+          "peasants": 1,
+          "mandarin": false
+        },
+        "A4": {
+          "peasants": 0,
+          "mandarin": false
+        },
+        "A5": {
+          "peasants": 0,
+          "mandarin": false
+        },
+        "QB": {
+          "peasants": 2,
+          "mandarin": true
+        },
+        "B1": {
+          "peasants": 8,
+          "mandarin": false
+        },
+        "B2": {
+          "peasants": 2,
+          "mandarin": false
+        },
+        "B3": {
+          "peasants": 1,
+          "mandarin": false
+        },
+        "B4": {
+          "peasants": 7,
+          "mandarin": false
+        },
+        "B5": {
+          "peasants": 7,
+          "mandarin": false
+        }
+      },
+      "restored": false,
+      "events": [
+        {
+          "type": "pickup",
+          "pos": "A1",
+          "peasants": 7
+        },
+        {
+          "type": "drop",
+          "from": "A1",
+          "to": "QA"
+        },
+        {
+          "type": "drop",
+          "from": "QA",
+          "to": "B1"
+        },
+        {
+          "type": "drop",
+          "from": "B1",
+          "to": "B2"
+        },
+        {
+          "type": "drop",
+          "from": "B2",
+          "to": "B3"
+        },
+        {
+          "type": "drop",
+          "from": "B3",
+          "to": "B4"
+        },
+        {
+          "type": "drop",
+          "from": "B4",
+          "to": "B5"
+        },
+        {
+          "type": "drop",
+          "from": "B5",
+          "to": "QB"
+        },
+        {
+          "type": "end_turn",
+          "reason": "TWO_EMPTY"
+        }
+      ]
+    },
+    {
+      "round": 2,
+      "team": "B",
+      "agent": "RandomAgent",
+      "model": "random",
+      "pos": "B3",
+      "way": "clockwise",
+      "reason": "Random legal move.",
+      "observation": "",
+      "invalid_attempts": 0,
+      "fallback": false,
+      "output_tokens": 0,
+      "error": "",
+      "steps": [
+        "[scatter] B3 - clockwise",
+        "[scatter] B1 - continue",
+        "[scatter] B4 - continue",
+        "[scatter] A4 - continue"
+      ],
+      "captured": 0,
+      "score": {
+        "A": 6,
+        "B": 6
+      },
+      "board": {
+        "QA": {
+          "peasants": 5,
+          "mandarin": true
+        },
+        "A1": {
+          "peasants": 2,
+          "mandarin": false
+        },
+        "A2": {
+          "peasants": 9,
+          "mandarin": false
+        },
+        "A3": {
+          "peasants": 3,
+          "mandarin": false
+        },
+        "A4": {
+          "peasants": 0,
+          "mandarin": false
+        },
+        "A5": {
+          "peasants": 2,
+          "mandarin": false
+        },
+        "QB": {
+          "peasants": 3,
+          "mandarin": true
+        },
+        "B1": {
+          "peasants": 1,
+          "mandarin": false
+        },
+        "B2": {
+          "peasants": 4,
+          "mandarin": false
+        },
+        "B3": {
+          "peasants": 1,
+          "mandarin": false
+        },
+        "B4": {
+          "peasants": 0,
+          "mandarin": false
+        },
+        "B5": {
+          "peasants": 8,
+          "mandarin": false
+        }
+      },
+      "restored": false,
+      "events": [
+        {
+          "type": "pickup",
+          "pos": "B3",
+          "peasants": 1
+        },
+        {
+          "type": "drop",
+          "from": "B3",
+          "to": "B2"
+        },
+        {
+          "type": "pickup",
+          "pos": "B1",
+          "peasants": 8
+        },
+        {
+          "type": "drop",
+          "from": "B1",
+          "to": "QA"
+        },
+        {
+          "type": "drop",
+          "from": "QA",
+          "to": "A1"
+        },
+        {
+          "type": "drop",
+          "from": "A1",
+          "to": "A2"
+        },
+        {
+          "type": "drop",
+          "from": "A2",
+          "to": "A3"
+        },
+        {
+          "type": "drop",
+          "from": "A3",
+          "to": "A4"
+        },
+        {
+          "type": "drop",
+          "from": "A4",
+          "to": "A5"
+        },
+        {
+          "type": "drop",
+          "from": "A5",
+          "to": "QB"
+        },
+        {
+          "type": "drop",
+          "from": "QB",
+          "to": "B5"
+        },
+        {
+          "type": "pickup",
+          "pos": "B4",
+          "peasants": 7
+        },
+        {
+          "type": "drop",
+          "from": "B4",
+          "to": "B3"
+        },
+        {
+          "type": "drop",
+          "from": "B3",
+          "to": "B2"
+        },
+        {
+          "type": "drop",
+          "from": "B2",
+          "to": "B1"
+        },
+        {
+          "type": "drop",
+          "from": "B1",
+          "to": "QA"
+        },
+        {
+          "type": "drop",
+          "from": "QA",
+          "to": "A1"
+        },
+        {
+          "type": "drop",
+          "from": "A1",
+          "to": "A2"
+        },
+        {
+          "type": "drop",
+          "from": "A2",
+          "to": "A3"
+        },
+        {
+          "type": "pickup",
+          "pos": "A4",
+          "peasants": 1
+        },
+        {
+          "type": "drop",
+          "from": "A4",
+          "to": "A5"
+        },
+        {
+          "type": "end_turn",
+          "reason": "HIT_MANDARIN_CELL"
+        }
+      ]
+    },
+    {
+      "round": 3,
+      "team": "A",
+      "agent": "RandomAgent",
+      "model": "random",
+      "pos": "A5",
+      "way": "counter_clockwise",
+      "reason": "Random legal move.",
+      "observation": "",
+      "invalid_attempts": 0,
+      "fallback": false,
+      "output_tokens": 0,
+      "error": "",
+      "steps": [
+        "[scatter] A5 - counter clockwise",
+        "[scatter] A2 - continue",
+        "[scatter] A4 - continue",
+        "[capture] A1 (3 pieces)"
+      ],
+      "captured": 3,
+      "score": {
+        "A": 9,
+        "B": 6
+      },
+      "board": {
+        "QA": {
+          "peasants": 6,
+          "mandarin": true
+        },
+        "A1": {
+          "peasants": 0,
+          "mandarin": false
+        },
+        "A2": {
+          "peasants": 0,
+          "mandarin": false
+        },
+        "A3": {
+          "peasants": 5,
+          "mandarin": false
+        },
+        "A4": {
+          "peasants": 0,
+          "mandarin": false
+        },
+        "A5": {
+          "peasants": 1,
+          "mandarin": false
+        },
+        "QB": {
+          "peasants": 4,
+          "mandarin": true
+        },
+        "B1": {
+          "peasants": 2,
+          "mandarin": false
+        },
+        "B2": {
+          "peasants": 5,
+          "mandarin": false
+        },
+        "B3": {
+          "peasants": 2,
+          "mandarin": false
+        },
+        "B4": {
+          "peasants": 1,
+          "mandarin": false
+        },
+        "B5": {
+          "peasants": 9,
+          "mandarin": false
+        }
+      },
+      "restored": false,
+      "events": [
+        {
+          "type": "pickup",
+          "pos": "A5",
+          "peasants": 2
+        },
+        {
+          "type": "drop",
+          "from": "A5",
+          "to": "A4"
+        },
+        {
+          "type": "drop",
+          "from": "A4",
+          "to": "A3"
+        },
+        {
+          "type": "pickup",
+          "pos": "A2",
+          "peasants": 9
+        },
+        {
+          "type": "drop",
+          "from": "A2",
+          "to": "A1"
+        },
+        {
+          "type": "drop",
+          "from": "A1",
+          "to": "QA"
+        },
+        {
+          "type": "drop",
+          "from": "QA",
+          "to": "B1"
+        },
+        {
+          "type": "drop",
+          "from": "B1",
+          "to": "B2"
+        },
+        {
+          "type": "drop",
+          "from": "B2",
+          "to": "B3"
+        },
+        {
+          "type": "drop",
+          "from": "B3",
+          "to": "B4"
+        },
+        {
+          "type": "drop",
+          "from": "B4",
+          "to": "B5"
+        },
+        {
+          "type": "drop",
+          "from": "B5",
+          "to": "QB"
+        },
+        {
+          "type": "drop",
+          "from": "QB",
+          "to": "A5"
+        },
+        {
+          "type": "pickup",
+          "pos": "A4",
+          "peasants": 1
+        },
+        {
+          "type": "drop",
+          "from": "A4",
+          "to": "A3"
+        },
+        {
+          "type": "capture",
+          "pos": "A1",
+          "peasants": 3,
+          "mandarin": false
+        },
+        {
+          "type": "score_update",
+          "score": {
+            "A": 9,
+            "B": 6
+          }
+        },
+        {
+          "type": "end_turn",
+          "reason": "CHAIN_BROKEN"
+        }
+      ]
+    },
+    {
+      "round": 3,
+      "team": "B",
+      "agent": "RandomAgent",
+      "model": "random",
+      "pos": "B4",
+      "way": "counter_clockwise",
+      "reason": "Random legal move.",
+      "observation": "",
+      "invalid_attempts": 0,
+      "fallback": false,
+      "output_tokens": 0,
+      "error": "",
+      "steps": [
+        "[scatter] B4 - counter clockwise"
+      ],
+      "captured": 0,
+      "score": {
+        "A": 9,
+        "B": 6
+      },
+      "board": {
+        "QA": {
+          "peasants": 6,
+          "mandarin": true
+        },
+        "A1": {
+          "peasants": 0,
+          "mandarin": false
+        },
+        "A2": {
+          "peasants": 0,
+          "mandarin": false
+        },
+        "A3": {
+          "peasants": 5,
+          "mandarin": false
+        },
+        "A4": {
+          "peasants": 0,
+          "mandarin": false
+        },
+        "A5": {
+          "peasants": 1,
+          "mandarin": false
+        },
+        "QB": {
+          "peasants": 4,
+          "mandarin": true
+        },
+        "B1": {
+          "peasants": 2,
+          "mandarin": false
+        },
+        "B2": {
+          "peasants": 5,
+          "mandarin": false
+        },
+        "B3": {
+          "peasants": 2,
+          "mandarin": false
+        },
+        "B4": {
+          "peasants": 0,
+          "mandarin": false
+        },
+        "B5": {
+          "peasants": 10,
+          "mandarin": false
+        }
+      },
+      "restored": false,
+      "events": [
+        {
+          "type": "pickup",
+          "pos": "B4",
+          "peasants": 1
+        },
+        {
+          "type": "drop",
+          "from": "B4",
+          "to": "B5"
+        },
+        {
+          "type": "end_turn",
+          "reason": "HIT_MANDARIN_CELL"
+        }
+      ]
+    },
+    {
+      "round": 4,
+      "team": "A",
+      "agent": "RandomAgent",
+      "model": "random",
+      "pos": "A5",
+      "way": "counter_clockwise",
+      "reason": "Random legal move.",
+      "observation": "",
+      "invalid_attempts": 0,
+      "fallback": false,
+      "output_tokens": 0,
+      "error": "",
+      "steps": [
+        "[scatter] A5 - counter clockwise",
+        "[scatter] A3 - continue",
+        "[scatter] B3 - continue"
+      ],
+      "captured": 0,
+      "score": {
+        "A": 9,
+        "B": 6
+      },
+      "board": {
+        "QA": {
+          "peasants": 7,
+          "mandarin": true
+        },
+        "A1": {
+          "peasants": 1,
+          "mandarin": false
+        },
+        "A2": {
+          "peasants": 1,
+          "mandarin": false
+        },
+        "A3": {
+          "peasants": 0,
+          "mandarin": false
+        },
+        "A4": {
+          "peasants": 1,
+          "mandarin": false
+        },
+        "A5": {
+          "peasants": 0,
+          "mandarin": false
+        },
+        "QB": {
+          "peasants": 4,
+          "mandarin": true
+        },
+        "B1": {
+          "peasants": 3,
+          "mandarin": false
+        },
+        "B2": {
+          "peasants": 6,
+          "mandarin": false
+        },
+        "B3": {
+          "peasants": 0,
+          "mandarin": false
+        },
+        "B4": {
+          "peasants": 1,
+          "mandarin": false
+        },
+        "B5": {
+          "peasants": 11,
+          "mandarin": false
+        }
+      },
+      "restored": false,
+      "events": [
+        {
+          "type": "pickup",
+          "pos": "A5",
+          "peasants": 1
+        },
+        {
+          "type": "drop",
+          "from": "A5",
+          "to": "A4"
+        },
+        {
+          "type": "pickup",
+          "pos": "A3",
+          "peasants": 5
+        },
+        {
+          "type": "drop",
+          "from": "A3",
+          "to": "A2"
+        },
+        {
+          "type": "drop",
+          "from": "A2",
+          "to": "A1"
+        },
+        {
+          "type": "drop",
+          "from": "A1",
+          "to": "QA"
+        },
+        {
+          "type": "drop",
+          "from": "QA",
+          "to": "B1"
+        },
+        {
+          "type": "drop",
+          "from": "B1",
+          "to": "B2"
+        },
+        {
+          "type": "pickup",
+          "pos": "B3",
+          "peasants": 2
+        },
+        {
+          "type": "drop",
+          "from": "B3",
+          "to": "B4"
+        },
+        {
+          "type": "drop",
+          "from": "B4",
+          "to": "B5"
+        },
+        {
+          "type": "end_turn",
+          "reason": "HIT_MANDARIN_CELL"
+        }
+      ]
+    },
+    {
+      "round": 4,
+      "team": "B",
+      "agent": "RandomAgent",
+      "model": "random",
+      "pos": "B5",
+      "way": "counter_clockwise",
+      "reason": "Random legal move.",
+      "observation": "",
+      "invalid_attempts": 0,
+      "fallback": false,
+      "output_tokens": 0,
+      "error": "",
+      "steps": [
+        "[scatter] B5 - counter clockwise",
+        "[capture] QB (6 pieces)"
+      ],
+      "captured": 15,
+      "score": {
+        "A": 9,
+        "B": 21
+      },
+      "board": {
+        "QA": {
+          "peasants": 8,
+          "mandarin": true
+        },
+        "A1": {
+          "peasants": 2,
+          "mandarin": false
+        },
+        "A2": {
+          "peasants": 2,
+          "mandarin": false
+        },
+        "A3": {
+          "peasants": 1,
+          "mandarin": false
+        },
+        "A4": {
+          "peasants": 2,
+          "mandarin": false
+        },
+        "A5": {
+          "peasants": 1,
+          "mandarin": false
+        },
+        "QB": {
+          "peasants": 0,
+          "mandarin": false
+        },
+        "B1": {
+          "peasants": 4,
+          "mandarin": false
+        },
+        "B2": {
+          "peasants": 7,
+          "mandarin": false
+        },
+        "B3": {
+          "peasants": 1,
+          "mandarin": false
+        },
+        "B4": {
+          "peasants": 2,
+          "mandarin": false
+        },
+        "B5": {
+          "peasants": 0,
+          "mandarin": false
+        }
+      },
+      "restored": false,
+      "events": [
+        {
+          "type": "pickup",
+          "pos": "B5",
+          "peasants": 11
+        },
+        {
+          "type": "drop",
+          "from": "B5",
+          "to": "QB"
+        },
+        {
+          "type": "drop",
+          "from": "QB",
+          "to": "A5"
+        },
+        {
+          "type": "drop",
+          "from": "A5",
+          "to": "A4"
+        },
+        {
+          "type": "drop",
+          "from": "A4",
+          "to": "A3"
+        },
+        {
+          "type": "drop",
+          "from": "A3",
+          "to": "A2"
+        },
+        {
+          "type": "drop",
+          "from": "A2",
+          "to": "A1"
+        },
+        {
+          "type": "drop",
+          "from": "A1",
+          "to": "QA"
+        },
+        {
+          "type": "drop",
+          "from": "QA",
+          "to": "B1"
+        },
+        {
+          "type": "drop",
+          "from": "B1",
+          "to": "B2"
+        },
+        {
+          "type": "drop",
+          "from": "B2",
+          "to": "B3"
+        },
+        {
+          "type": "drop",
+          "from": "B3",
+          "to": "B4"
+        },
+        {
+          "type": "capture",
+          "pos": "QB",
+          "peasants": 5,
+          "mandarin": true
+        },
+        {
+          "type": "score_update",
+          "score": {
+            "A": 9,
+            "B": 21
+          }
+        },
+        {
+          "type": "end_turn",
+          "reason": "CHAIN_BROKEN"
+        }
+      ]
+    },
+    {
+      "round": 5,
+      "team": "A",
+      "agent": "RandomAgent",
+      "model": "random",
+      "pos": "A3",
+      "way": "clockwise",
+      "reason": "Random legal move.",
+      "observation": "",
+      "invalid_attempts": 0,
+      "fallback": false,
+      "output_tokens": 0,
+      "error": "",
+      "steps": [
+        "[scatter] A3 - clockwise",
+        "[scatter] A5 - continue",
+        "[capture] B4 (2 pieces)"
+      ],
+      "captured": 2,
+      "score": {
+        "A": 11,
+        "B": 21
+      },
+      "board": {
+        "QA": {
+          "peasants": 8,
+          "mandarin": true
+        },
+        "A1": {
+          "peasants": 2,
+          "mandarin": false
+        },
+        "A2": {
+          "peasants": 2,
+          "mandarin": false
+        },
+        "A3": {
+          "peasants": 0,
+          "mandarin": false
+        },
+        "A4": {
+          "peasants": 3,
+          "mandarin": false
+        },
+        "A5": {
+          "peasants": 0,
+          "mandarin": false
+        },
+        "QB": {
+          "peasants": 1,
+          "mandarin": false
+        },
+        "B1": {
+          "peasants": 4,
+          "mandarin": false
+        },
+        "B2": {
+          "peasants": 7,
+          "mandarin": false
+        },
+        "B3": {
+          "peasants": 1,
+          "mandarin": false
+        },
+        "B4": {
+          "peasants": 0,
+          "mandarin": false
+        },
+        "B5": {
+          "peasants": 0,
+          "mandarin": false
+        }
+      },
+      "restored": false,
+      "events": [
+        {
+          "type": "pickup",
+          "pos": "A3",
+          "peasants": 1
+        },
+        {
+          "type": "drop",
+          "from": "A3",
+          "to": "A4"
+        },
+        {
+          "type": "pickup",
+          "pos": "A5",
+          "peasants": 1
+        },
+        {
+          "type": "drop",
+          "from": "A5",
+          "to": "QB"
+        },
+        {
+          "type": "capture",
+          "pos": "B4",
+          "peasants": 2,
+          "mandarin": false
+        },
+        {
+          "type": "score_update",
+          "score": {
+            "A": 11,
+            "B": 21
+          }
+        },
+        {
+          "type": "end_turn",
+          "reason": "CHAIN_BROKEN"
+        }
+      ]
+    },
+    {
+      "round": 5,
+      "team": "B",
+      "agent": "RandomAgent",
+      "model": "random",
+      "pos": "B1",
+      "way": "clockwise",
+      "reason": "Random legal move.",
+      "observation": "",
+      "invalid_attempts": 0,
+      "fallback": false,
+      "output_tokens": 0,
+      "error": "",
+      "steps": [
+        "[scatter] B1 - clockwise",
+        "[scatter] A4 - continue",
+        "[capture] B3 (1 pieces)"
+      ],
+      "captured": 1,
+      "score": {
+        "A": 11,
+        "B": 22
+      },
+      "board": {
+        "QA": {
+          "peasants": 9,
+          "mandarin": true
+        },
+        "A1": {
+          "peasants": 3,
+          "mandarin": false
+        },
+        "A2": {
+          "peasants": 3,
+          "mandarin": false
+        },
+        "A3": {
+          "peasants": 1,
+          "mandarin": false
+        },
+        "A4": {
+          "peasants": 0,
+          "mandarin": false
+        },
+        "A5": {
+          "peasants": 1,
+          "mandarin": false
+        },
+        "QB": {
+          "peasants": 2,
+          "mandarin": false
+        },
+        "B1": {
+          "peasants": 0,
+          "mandarin": false
+        },
+        "B2": {
+          "peasants": 7,
+          "mandarin": false
+        },
+        "B3": {
+          "peasants": 0,
+          "mandarin": false
+        },
+        "B4": {
+          "peasants": 0,
+          "mandarin": false
+        },
+        "B5": {
+          "peasants": 1,
+          "mandarin": false
+        }
+      },
+      "restored": false,
+      "events": [
+        {
+          "type": "pickup",
+          "pos": "B1",
+          "peasants": 4
+        },
+        {
+          "type": "drop",
+          "from": "B1",
+          "to": "QA"
+        },
+        {
+          "type": "drop",
+          "from": "QA",
+          "to": "A1"
+        },
+        {
+          "type": "drop",
+          "from": "A1",
+          "to": "A2"
+        },
+        {
+          "type": "drop",
+          "from": "A2",
+          "to": "A3"
+        },
+        {
+          "type": "pickup",
+          "pos": "A4",
+          "peasants": 3
+        },
+        {
+          "type": "drop",
+          "from": "A4",
+          "to": "A5"
+        },
+        {
+          "type": "drop",
+          "from": "A5",
+          "to": "QB"
+        },
+        {
+          "type": "drop",
+          "from": "QB",
+          "to": "B5"
+        },
+        {
+          "type": "capture",
+          "pos": "B3",
+          "peasants": 1,
+          "mandarin": false
+        },
+        {
+          "type": "score_update",
+          "score": {
+            "A": 11,
+            "B": 22
+          }
+        },
+        {
+          "type": "end_turn",
+          "reason": "CHAIN_BROKEN"
+        }
+      ]
+    },
+    {
+      "round": 6,
+      "team": "A",
+      "agent": "RandomAgent",
+      "model": "random",
+      "pos": "A2",
+      "way": "counter_clockwise",
+      "reason": "Random legal move.",
+      "observation": "",
+      "invalid_attempts": 0,
+      "fallback": false,
+      "output_tokens": 0,
+      "error": "",
+      "steps": [
+        "[scatter] A2 - counter clockwise",
+        "[scatter] B2 - continue",
+        "[capture] A1 (4 pieces)"
+      ],
+      "captured": 4,
+      "score": {
+        "A": 15,
+        "B": 22
+      },
+      "board": {
+        "QA": {
+          "peasants": 10,
+          "mandarin": true
+        },
+        "A1": {
+          "peasants": 0,
+          "mandarin": false
+        },
+        "A2": {
+          "peasants": 0,
+          "mandarin": false
+        },
+        "A3": {
+          "peasants": 2,
+          "mandarin": false
+        },
+        "A4": {
+          "peasants": 1,
+          "mandarin": false
+        },
+        "A5": {
+          "peasants": 2,
+          "mandarin": false
+        },
+        "QB": {
+          "peasants": 3,
+          "mandarin": false
+        },
+        "B1": {
+          "peasants": 1,
+          "mandarin": false
+        },
+        "B2": {
+          "peasants": 0,
+          "mandarin": false
+        },
+        "B3": {
+          "peasants": 1,
+          "mandarin": false
+        },
+        "B4": {
+          "peasants": 1,
+          "mandarin": false
+        },
+        "B5": {
+          "peasants": 2,
+          "mandarin": false
+        }
+      },
+      "restored": false,
+      "events": [
+        {
+          "type": "pickup",
+          "pos": "A2",
+          "peasants": 3
+        },
+        {
+          "type": "drop",
+          "from": "A2",
+          "to": "A1"
+        },
+        {
+          "type": "drop",
+          "from": "A1",
+          "to": "QA"
+        },
+        {
+          "type": "drop",
+          "from": "QA",
+          "to": "B1"
+        },
+        {
+          "type": "pickup",
+          "pos": "B2",
+          "peasants": 7
+        },
+        {
+          "type": "drop",
+          "from": "B2",
+          "to": "B3"
+        },
+        {
+          "type": "drop",
+          "from": "B3",
+          "to": "B4"
+        },
+        {
+          "type": "drop",
+          "from": "B4",
+          "to": "B5"
+        },
+        {
+          "type": "drop",
+          "from": "B5",
+          "to": "QB"
+        },
+        {
+          "type": "drop",
+          "from": "QB",
+          "to": "A5"
+        },
+        {
+          "type": "drop",
+          "from": "A5",
+          "to": "A4"
+        },
+        {
+          "type": "drop",
+          "from": "A4",
+          "to": "A3"
+        },
+        {
+          "type": "capture",
+          "pos": "A1",
+          "peasants": 4,
+          "mandarin": false
+        },
+        {
+          "type": "score_update",
+          "score": {
+            "A": 15,
+            "B": 22
+          }
+        },
+        {
+          "type": "end_turn",
+          "reason": "CHAIN_BROKEN"
+        }
+      ]
+    },
+    {
+      "round": 6,
+      "team": "B",
+      "agent": "RandomAgent",
+      "model": "random",
+      "pos": "B5",
+      "way": "clockwise",
+      "reason": "Random legal move.",
+      "observation": "",
+      "invalid_attempts": 0,
+      "fallback": false,
+      "output_tokens": 0,
+      "error": "",
+      "steps": [
+        "[scatter] B5 - clockwise",
+        "[capture] B1 (1 pieces)"
+      ],
+      "captured": 1,
+      "score": {
+        "A": 15,
+        "B": 23
+      },
+      "board": {
+        "QA": {
+          "peasants": 10,
+          "mandarin": true
+        },
+        "A1": {
+          "peasants": 0,
+          "mandarin": false
+        },
+        "A2": {
+          "peasants": 0,
+          "mandarin": false
+        },
+        "A3": {
+          "peasants": 2,
+          "mandarin": false
+        },
+        "A4": {
+          "peasants": 1,
+          "mandarin": false
+        },
+        "A5": {
+          "peasants": 2,
+          "mandarin": false
+        },
+        "QB": {
+          "peasants": 3,
+          "mandarin": false
+        },
+        "B1": {
+          "peasants": 0,
+          "mandarin": false
+        },
+        "B2": {
+          "peasants": 0,
+          "mandarin": false
+        },
+        "B3": {
+          "peasants": 2,
+          "mandarin": false
+        },
+        "B4": {
+          "peasants": 2,
+          "mandarin": false
+        },
+        "B5": {
+          "peasants": 0,
+          "mandarin": false
+        }
+      },
+      "restored": false,
+      "events": [
+        {
+          "type": "pickup",
+          "pos": "B5",
+          "peasants": 2
+        },
+        {
+          "type": "drop",
+          "from": "B5",
+          "to": "B4"
+        },
+        {
+          "type": "drop",
+          "from": "B4",
+          "to": "B3"
+        },
+        {
+          "type": "capture",
+          "pos": "B1",
+          "peasants": 1,
+          "mandarin": false
+        },
+        {
+          "type": "score_update",
+          "score": {
+            "A": 15,
+            "B": 23
+          }
+        },
+        {
+          "type": "end_turn",
+          "reason": "CHAIN_BROKEN"
+        }
+      ]
+    },
+    {
+      "round": 7,
+      "team": "A",
+      "agent": "RandomAgent",
+      "model": "random",
+      "pos": "A3",
+      "way": "clockwise",
+      "reason": "Random legal move.",
+      "observation": "",
+      "invalid_attempts": 0,
+      "fallback": false,
+      "output_tokens": 0,
+      "error": "",
+      "steps": [
+        "[scatter] A3 - clockwise"
+      ],
+      "captured": 0,
+      "score": {
+        "A": 15,
+        "B": 23
+      },
+      "board": {
+        "QA": {
+          "peasants": 10,
+          "mandarin": true
+        },
+        "A1": {
+          "peasants": 0,
+          "mandarin": false
+        },
+        "A2": {
+          "peasants": 0,
+          "mandarin": false
+        },
+        "A3": {
+          "peasants": 0,
+          "mandarin": false
+        },
+        "A4": {
+          "peasants": 2,
+          "mandarin": false
+        },
+        "A5": {
+          "peasants": 3,
+          "mandarin": false
+        },
+        "QB": {
+          "peasants": 3,
+          "mandarin": false
+        },
+        "B1": {
+          "peasants": 0,
+          "mandarin": false
+        },
+        "B2": {
+          "peasants": 0,
+          "mandarin": false
+        },
+        "B3": {
+          "peasants": 2,
+          "mandarin": false
+        },
+        "B4": {
+          "peasants": 2,
+          "mandarin": false
+        },
+        "B5": {
+          "peasants": 0,
+          "mandarin": false
+        }
+      },
+      "restored": false,
+      "events": [
+        {
+          "type": "pickup",
+          "pos": "A3",
+          "peasants": 2
+        },
+        {
+          "type": "drop",
+          "from": "A3",
+          "to": "A4"
+        },
+        {
+          "type": "drop",
+          "from": "A4",
+          "to": "A5"
+        },
+        {
+          "type": "end_turn",
+          "reason": "HIT_MANDARIN_CELL"
+        }
+      ]
+    },
+    {
+      "round": 7,
+      "team": "B",
+      "agent": "RandomAgent",
+      "model": "random",
+      "pos": "B4",
+      "way": "counter_clockwise",
+      "reason": "Random legal move.",
+      "observation": "",
+      "invalid_attempts": 0,
+      "fallback": false,
+      "output_tokens": 0,
+      "error": "",
+      "steps": [
+        "[scatter] B4 - counter clockwise",
+        "[scatter] A5 - continue",
+        "[capture] QA (11 pieces)"
+      ],
+      "captured": 20,
+      "score": {
+        "A": 15,
+        "B": 43
+      },
+      "board": {
+        "QA": {
+          "peasants": 0,
+          "mandarin": false
+        },
+        "A1": {
+          "peasants": 0,
+          "mandarin": false
+        },
+        "A2": {
+          "peasants": 1,
+          "mandarin": false
+        },
+        "A3": {
+          "peasants": 1,
+          "mandarin": false
+        },
+        "A4": {
+          "peasants": 3,
+          "mandarin": false
+        },
+        "A5": {
+          "peasants": 0,
+          "mandarin": false
+        },
+        "QB": {
+          "peasants": 4,
+          "mandarin": false
+        },
+        "B1": {
+          "peasants": 0,
+          "mandarin": false
+        },
+        "B2": {
+          "peasants": 0,
+          "mandarin": false
+        },
+        "B3": {
+          "peasants": 2,
+          "mandarin": false
+        },
+        "B4": {
+          "peasants": 0,
+          "mandarin": false
+        },
+        "B5": {
+          "peasants": 1,
+          "mandarin": false
+        }
+      },
+      "restored": false,
+      "events": [
+        {
+          "type": "pickup",
+          "pos": "B4",
+          "peasants": 2
+        },
+        {
+          "type": "drop",
+          "from": "B4",
+          "to": "B5"
+        },
+        {
+          "type": "drop",
+          "from": "B5",
+          "to": "QB"
+        },
+        {
+          "type": "pickup",
+          "pos": "A5",
+          "peasants": 3
+        },
+        {
+          "type": "drop",
+          "from": "A5",
+          "to": "A4"
+        },
+        {
+          "type": "drop",
+          "from": "A4",
+          "to": "A3"
+        },
+        {
+          "type": "drop",
+          "from": "A3",
+          "to": "A2"
+        },
+        {
+          "type": "capture",
+          "pos": "QA",
+          "peasants": 10,
+          "mandarin": true
+        },
+        {
+          "type": "score_update",
+          "score": {
+            "A": 15,
+            "B": 43
+          }
+        },
+        {
+          "type": "end_turn",
+          "reason": "TWO_EMPTY"
+        },
+        {
+          "type": "end_game",
+          "reason": "END_BY_NO_MANDARINS",
+          "final_score": {
+            "A": 15,
+            "B": 43
+          }
+        }
+      ]
+    }
+  ],
+  "created_at": "2026-11-12T08:02:31.117034+00:00"
+}

@@ -7,6 +7,14 @@ import json
 # Shared Rich console instance for structured logging
 console = Console()
 
+# Global switch for tool logging (disabled during batch experiments)
+VERBOSE = True
+
+
+def set_verbose(verbose: bool):
+    global VERBOSE
+    VERBOSE = verbose
+
 
 def log_tool(tool_func):
     """
@@ -41,6 +49,8 @@ def log_tool(tool_func):
         
         # --- Execute the tool ---
         result = tool_func(*args, **kwargs)
+        if not VERBOSE:
+            return result
         result_str = str(result)
 
         # --- Compose formatted log body ---
